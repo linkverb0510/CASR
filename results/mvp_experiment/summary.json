@@ -34,5 +34,5 @@
   ],
   "casr_repair_success_rate": 1.0,
   "full_rebuild_repair_success_rate": 1.0,
-  "finding": "在本合成设定中，CASR 与整体重建均通过新需求和保留功能验收；CASR 未重写 0 个保留模块，整体重建重写 12 个保留模块。"
+  "finding": "在本合成设定中，CASR 与整体重建均通过新需求和保留功能验收；CASR 重写 0 个保留模块，整体重建重写 12 个保留模块。"
 }

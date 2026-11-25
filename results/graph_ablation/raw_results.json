@@ -19,19 +19,19 @@
     "retained_modules_rewritten": 0,
     "impact": {
       "seed_artifacts": [
-        "src/xml_helpers.py",
-        "src/exporter.py"
+        "src/exporter.py",
+        "src/xml_helpers.py"
       ],
       "active_supported_artifacts": [
-        "src/retained_3.py",
-        "src/retained_1.py",
-        "src/retained_0.py",
-        "src/retained_5.py",
         "src/checksum.py",
-        "src/summary.py",
+        "src/retained_2.py",
+        "src/retained_1.py",
+        "src/retained_5.py",
         "src/retained_4.py",
+        "src/retained_3.py",
         "src/exporter.py",
-        "src/retained_2.py"
+        "src/summary.py",
+        "src/retained_0.py"
       ],
       "exclusive_invalid_artifacts": [
         "src/xml_helpers.py"
@@ -43,14 +43,14 @@
         "src/cli.py"
       ],
       "unaffected_active_artifacts": [
-        "src/retained_3.py",
-        "src/retained_1.py",
-        "src/retained_0.py",
-        "src/retained_5.py",
-        "src/summary.py",
-        "src/retained_4.py",
         "src/checksum.py",
-        "src/retained_2.py"
+        "src/retained_2.py",
+        "src/retained_1.py",
+        "src/retained_5.py",
+        "src/retained_4.py",
+        "src/retained_3.py",
+        "src/summary.py",
+        "src/retained_0.py"
       ]
     },
     "repair_plan": {
@@ -187,7 +187,7 @@
           "test_id": "active_json",
           "status": "PASS",
           "return_code": 0,
-          "duration_seconds": 0.14000000000010004,
+          "duration_seconds": 0.125,
           "stdout": "",
           "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n",
           "reason": "command exited successfully"
@@ -198,7 +198,7 @@
           "return_code": 0,
           "duration_seconds": 0.15599999999994907,
           "stdout": "",
-          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.012s\n\nOK\n",
+          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.014s\n\nOK\n",
           "reason": "command exited successfully"
         }
       ]
@@ -671,29 +671,29 @@
     "impact": {
       "seed_artifacts": [],
       "active_supported_artifacts": [
-        "src/retained_3.py",
-        "src/retained_1.py",
-        "src/retained_0.py",
-        "src/retained_5.py",
         "src/checksum.py",
-        "src/summary.py",
+        "src/retained_2.py",
+        "src/retained_1.py",
+        "src/retained_5.py",
         "src/retained_4.py",
+        "src/retained_3.py",
         "src/exporter.py",
-        "src/retained_2.py"
+        "src/summary.py",
+        "src/retained_0.py"
       ],
       "exclusive_invalid_artifacts": [],
       "shared_artifacts": [],
       "downstream_artifacts": [],
       "unaffected_active_artifacts": [
-        "src/retained_3.py",
-        "src/retained_1.py",
-        "src/retained_0.py",
-        "src/retained_5.py",
         "src/checksum.py",
-        "src/summary.py",
+        "src/retained_2.py",
+        "src/retained_1.py",
+        "src/retained_5.py",
         "src/retained_4.py",
+        "src/retained_3.py",
         "src/exporter.py",
-        "src/retained_2.py"
+        "src/summary.py",
+        "src/retained_0.py"
       ]
     },
     "repair_plan": {
@@ -808,18 +808,18 @@
           "test_id": "active_json",
           "status": "FAIL",
           "return_code": 1,
-          "duration_seconds": 0.14000000000010004,
+          "duration_seconds": 0.1410000000000764,
           "stdout": "",
-          "stderr": "E\n======================================================================\nERROR: test_json_export (unittest.loader._FailedTest.test_json_export)\n----------------------------------------------------------------------\nImportError: Failed to import test module: test_json_export\nTraceback (most recent call last):\n  File \"C:\\Users\\李世旺\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 382, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\李世旺\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 325, in _get_module_from_name\n    __import__(name)\n  File \"C:\\Users\\李世旺\\AppData\\Local\\Temp\\casr-graph-ablation-o1l_8x22\\large\\missing_provenance\\tests\\test_json_export.py\", line 7, in <module>\n    from exporter import export_json, read_rows\nImportError: cannot import name 'export_json' from 'exporter' (C:\\Users\\李世旺\\AppData\\Local\\Temp\\casr-graph-ablation-o1l_8x22\\large\\missing_provenance\\src\\exporter.py). Did you mean: 'export_xml'?\n\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nFAILED (errors=1)\n",
+          "stderr": "E\n======================================================================\nERROR: test_json_export (unittest.loader._FailedTest.test_json_export)\n----------------------------------------------------------------------\nImportError: Failed to import test module: test_json_export\nTraceback (most recent call last):\n  File \"C:\\Users\\李世旺\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 382, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\李世旺\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 325, in _get_module_from_name\n    __import__(name)\n  File \"C:\\Users\\李世旺\\AppData\\Local\\Temp\\casr-graph-ablation-l_yfmkm8\\large\\missing_provenance\\tests\\test_json_export.py\", line 7, in <module>\n    from exporter import export_json, read_rows\nImportError: cannot import name 'export_json' from 'exporter' (C:\\Users\\李世旺\\AppData\\Local\\Temp\\casr-graph-ablation-l_yfmkm8\\large\\missing_provenance\\src\\exporter.py). Did you mean: 'export_xml'?\n\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nFAILED (errors=1)\n",
           "reason": "command exited non-zero"
         },
         {
           "test_id": "retention",
           "status": "PASS",
           "return_code": 0,
-          "duration_seconds": 0.15699999999992542,
+          "duration_seconds": 0.15599999999994907,
           "stdout": "",
-          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.013s\n\nOK\n",
+          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.014s\n\nOK\n",
           "reason": "command exited successfully"
         }
       ]
@@ -1286,19 +1286,19 @@
     "retained_modules_rewritten": 0,
     "impact": {
       "seed_artifacts": [
-        "src/xml_helpers.py",
-        "src/exporter.py"
+        "src/exporter.py",
+        "src/xml_helpers.py"
       ],
       "active_supported_artifacts": [
-        "src/retained_3.py",
-        "src/retained_1.py",
-        "src/retained_0.py",
-        "src/retained_5.py",
         "src/checksum.py",
-        "src/summary.py",
+        "src/retained_2.py",
+        "src/retained_1.py",
+        "src/retained_5.py",
         "src/retained_4.py",
+        "src/retained_3.py",
         "src/exporter.py",
-        "src/retained_2.py"
+        "src/summary.py",
+        "src/retained_0.py"
       ],
       "exclusive_invalid_artifacts": [
         "src/xml_helpers.py"
@@ -1307,17 +1307,17 @@
         "src/exporter.py"
       ],
       "downstream_artifacts": [
-        "src/cli.py",
-        "src/checksum.py"
+        "src/checksum.py",
+        "src/cli.py"
       ],
       "unaffected_active_artifacts": [
-        "src/retained_3.py",
+        "src/retained_2.py",
         "src/retained_1.py",
-        "src/retained_0.py",
         "src/retained_5.py",
-        "src/summary.py",
         "src/retained_4.py",
-        "src/retained_2.py"
+        "src/retained_3.py",
+        "src/summary.py",
+        "src/retained_0.py"
       ]
     },
     "repair_plan": {
@@ -1454,7 +1454,7 @@
           "test_id": "active_json",
           "status": "PASS",
           "return_code": 0,
-          "duration_seconds": 0.14000000000010004,
+          "duration_seconds": 0.1410000000000764,
           "stdout": "",
           "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.001s\n\nOK\n",
           "reason": "command exited successfully"
@@ -1465,7 +1465,7 @@
           "return_code": 0,
           "duration_seconds": 0.15599999999994907,
           "stdout": "",
-          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.013s\n\nOK\n",
+          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.014s\n\nOK\n",
           "reason": "command exited successfully"
         }
       ]
@@ -1948,17 +1948,17 @@
     "retained_modules_rewritten": 0,
     "impact": {
       "seed_artifacts": [
-        "src/xml_helpers.py",
-        "src/exporter.py"
+        "src/exporter.py",
+        "src/xml_helpers.py"
       ],
       "active_supported_artifacts": [
-        "src/retained_3.py",
-        "src/retained_1.py",
-        "src/retained_0.py",
-        "src/summary.py",
         "src/checksum.py",
+        "src/retained_2.py",
+        "src/retained_1.py",
+        "src/retained_3.py",
         "src/exporter.py",
-        "src/retained_2.py"
+        "src/summary.py",
+        "src/retained_0.py"
       ],
       "exclusive_invalid_artifacts": [
         "src/xml_helpers.py"
@@ -1970,12 +1970,12 @@
         "src/cli.py"
       ],
       "unaffected_active_artifacts": [
-        "src/retained_3.py",
-        "src/retained_1.py",
-        "src/retained_0.py",
-        "src/summary.py",
         "src/checksum.py",
-        "src/retained_2.py"
+        "src/retained_2.py",
+        "src/retained_1.py",
+        "src/retained_3.py",
+        "src/summary.py",
+        "src/retained_0.py"
       ]
     },
     "repair_plan": {
@@ -2090,16 +2090,16 @@
           "test_id": "active_json",
           "status": "PASS",
           "return_code": 0,
-          "duration_seconds": 0.14000000000010004,
+          "duration_seconds": 0.13999999999987267,
           "stdout": "",
-          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n",
+          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.001s\n\nOK\n",
           "reason": "command exited successfully"
         },
         {
           "test_id": "retention",
           "status": "PASS",
           "return_code": 0,
-          "duration_seconds": 0.15699999999992542,
+          "duration_seconds": 0.17200000000002547,
           "stdout": "",
           "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.009s\n\nOK\n",
           "reason": "command exited successfully"
@@ -2532,25 +2532,25 @@
     "impact": {
       "seed_artifacts": [],
       "active_supported_artifacts": [
-        "src/retained_3.py",
-        "src/retained_1.py",
-        "src/retained_0.py",
-        "src/summary.py",
         "src/checksum.py",
+        "src/retained_2.py",
+        "src/retained_1.py",
+        "src/retained_3.py",
         "src/exporter.py",
-        "src/retained_2.py"
+        "src/summary.py",
+        "src/retained_0.py"
       ],
       "exclusive_invalid_artifacts": [],
       "shared_artifacts": [],
       "downstream_artifacts": [],
       "unaffected_active_artifacts": [
-        "src/retained_3.py",
-        "src/retained_1.py",
-        "src/retained_0.py",
-        "src/summary.py",
         "src/checksum.py",
+        "src/retained_2.py",
+        "src/retained_1.py",
+        "src/retained_3.py",
         "src/exporter.py",
-        "src/retained_2.py"
+        "src/summary.py",
+        "src/retained_0.py"
       ]
     },
     "repair_plan": {
@@ -2643,18 +2643,18 @@
           "test_id": "active_json",
           "status": "FAIL",
           "return_code": 1,
-          "duration_seconds": 0.14099999999984902,
+          "duration_seconds": 0.1410000000000764,
           "stdout": "",
-          "stderr": "E\n======================================================================\nERROR: test_json_export (unittest.loader._FailedTest.test_json_export)\n----------------------------------------------------------------------\nImportError: Failed to import test module: test_json_export\nTraceback (most recent call last):\n  File \"C:\\Users\\李世旺\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 382, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\李世旺\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 325, in _get_module_from_name\n    __import__(name)\n  File \"C:\\Users\\李世旺\\AppData\\Local\\Temp\\casr-graph-ablation-o1l_8x22\\medium\\missing_provenance\\tests\\test_json_export.py\", line 7, in <module>\n    from exporter import export_json, read_rows\nImportError: cannot import name 'export_json' from 'exporter' (C:\\Users\\李世旺\\AppData\\Local\\Temp\\casr-graph-ablation-o1l_8x22\\medium\\missing_provenance\\src\\exporter.py). Did you mean: 'export_xml'?\n\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nFAILED (errors=1)\n",
+          "stderr": "E\n======================================================================\nERROR: test_json_export (unittest.loader._FailedTest.test_json_export)\n----------------------------------------------------------------------\nImportError: Failed to import test module: test_json_export\nTraceback (most recent call last):\n  File \"C:\\Users\\李世旺\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 382, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\李世旺\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 325, in _get_module_from_name\n    __import__(name)\n  File \"C:\\Users\\李世旺\\AppData\\Local\\Temp\\casr-graph-ablation-l_yfmkm8\\medium\\missing_provenance\\tests\\test_json_export.py\", line 7, in <module>\n    from exporter import export_json, read_rows\nImportError: cannot import name 'export_json' from 'exporter' (C:\\Users\\李世旺\\AppData\\Local\\Temp\\casr-graph-ablation-l_yfmkm8\\medium\\missing_provenance\\src\\exporter.py). Did you mean: 'export_xml'?\n\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nFAILED (errors=1)\n",
           "reason": "command exited non-zero"
         },
         {
           "test_id": "retention",
           "status": "PASS",
           "return_code": 0,
-          "duration_seconds": 0.15600000000017644,
+          "duration_seconds": 0.17200000000002547,
           "stdout": "",
-          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.009s\n\nOK\n",
+          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.010s\n\nOK\n",
           "reason": "command exited successfully"
         }
       ]
@@ -3079,17 +3079,17 @@
     "retained_modules_rewritten": 0,
     "impact": {
       "seed_artifacts": [
-        "src/xml_helpers.py",
-        "src/exporter.py"
+        "src/exporter.py",
+        "src/xml_helpers.py"
       ],
       "active_supported_artifacts": [
-        "src/retained_3.py",
-        "src/retained_1.py",
-        "src/retained_0.py",
-        "src/summary.py",
         "src/checksum.py",
+        "src/retained_2.py",
+        "src/retained_1.py",
+        "src/retained_3.py",
         "src/exporter.py",
-        "src/retained_2.py"
+        "src/summary.py",
+        "src/retained_0.py"
       ],
       "exclusive_invalid_artifacts": [
         "src/xml_helpers.py"
@@ -3098,15 +3098,15 @@
         "src/exporter.py"
       ],
       "downstream_artifacts": [
-        "src/cli.py",
-        "src/checksum.py"
+        "src/checksum.py",
+        "src/cli.py"
       ],
       "unaffected_active_artifacts": [
-        "src/retained_3.py",
+        "src/retained_2.py",
         "src/retained_1.py",
-        "src/retained_0.py",
+        "src/retained_3.py",
         "src/summary.py",
-        "src/retained_2.py"
+        "src/retained_0.py"
       ]
     },
     "repair_plan": {
@@ -3223,16 +3223,16 @@
           "return_code": 0,
           "duration_seconds": 0.125,
           "stdout": "",
-          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n",
+          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.001s\n\nOK\n",
           "reason": "command exited successfully"
         },
         {
           "test_id": "retention",
           "status": "PASS",
           "return_code": 0,
-          "duration_seconds": 0.1719999999997981,
+          "duration_seconds": 0.15599999999994907,
           "stdout": "",
-          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.009s\n\nOK\n",
+          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.010s\n\nOK\n",
           "reason": "command exited successfully"
         }
       ]
@@ -3673,15 +3673,15 @@
     "retained_modules_rewritten": 0,
     "impact": {
       "seed_artifacts": [
-        "src/xml_helpers.py",
-        "src/exporter.py"
+        "src/exporter.py",
+        "src/xml_helpers.py"
       ],
       "active_supported_artifacts": [
-        "src/retained_1.py",
-        "src/retained_0.py",
-        "src/summary.py",
         "src/checksum.py",
-        "src/exporter.py"
+        "src/retained_1.py",
+        "src/exporter.py",
+        "src/summary.py",
+        "src/retained_0.py"
       ],
       "exclusive_invalid_artifacts": [
         "src/xml_helpers.py"
@@ -3693,10 +3693,10 @@
         "src/cli.py"
       ],
       "unaffected_active_artifacts": [
-        "src/summary.py",
-        "src/retained_1.py",
         "src/checksum.py",
-        "src/retained_0.py"
+        "src/summary.py",
+        "src/retained_0.py",
+        "src/retained_1.py"
       ]
     },
     "repair_plan": {
@@ -3789,16 +3789,16 @@
           "test_id": "active_json",
           "status": "PASS",
           "return_code": 0,
-          "duration_seconds": 0.125,
+          "duration_seconds": 0.13999999999987267,
           "stdout": "",
-          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n",
+          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.001s\n\nOK\n",
           "reason": "command exited successfully"
         },
         {
           "test_id": "retention",
           "status": "PASS",
           "return_code": 0,
-          "duration_seconds": 0.15600000000017644,
+          "duration_seconds": 0.1410000000000764,
           "stdout": "",
           "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.005s\n\nOK\n",
           "reason": "command exited successfully"
@@ -4189,21 +4189,21 @@
     "impact": {
       "seed_artifacts": [],
       "active_supported_artifacts": [
-        "src/retained_1.py",
-        "src/retained_0.py",
-        "src/summary.py",
         "src/checksum.py",
-        "src/exporter.py"
+        "src/retained_1.py",
+        "src/exporter.py",
+        "src/summary.py",
+        "src/retained_0.py"
       ],
       "exclusive_invalid_artifacts": [],
       "shared_artifacts": [],
       "downstream_artifacts": [],
       "unaffected_active_artifacts": [
-        "src/retained_1.py",
-        "src/retained_0.py",
-        "src/summary.py",
         "src/checksum.py",
-        "src/exporter.py"
+        "src/retained_1.py",
+        "src/exporter.py",
+        "src/summary.py",
+        "src/retained_0.py"
       ]
     },
     "repair_plan": {
@@ -4274,16 +4274,16 @@
           "test_id": "active_json",
           "status": "FAIL",
           "return_code": 1,
-          "duration_seconds": 0.14099999999984902,
+          "duration_seconds": 0.1410000000000764,
           "stdout": "",
-          "stderr": "E\n======================================================================\nERROR: test_json_export (unittest.loader._FailedTest.test_json_export)\n----------------------------------------------------------------------\nImportError: Failed to import test module: test_json_export\nTraceback (most recent call last):\n  File \"C:\\Users\\李世旺\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 382, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\李世旺\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 325, in _get_module_from_name\n    __import__(name)\n  File \"C:\\Users\\李世旺\\AppData\\Local\\Temp\\casr-graph-ablation-o1l_8x22\\small\\missing_provenance\\tests\\test_json_export.py\", line 7, in <module>\n    from exporter import export_json, read_rows\nImportError: cannot import name 'export_json' from 'exporter' (C:\\Users\\李世旺\\AppData\\Local\\Temp\\casr-graph-ablation-o1l_8x22\\small\\missing_provenance\\src\\exporter.py). Did you mean: 'export_xml'?\n\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nFAILED (errors=1)\n",
+          "stderr": "E\n======================================================================\nERROR: test_json_export (unittest.loader._FailedTest.test_json_export)\n----------------------------------------------------------------------\nImportError: Failed to import test module: test_json_export\nTraceback (most recent call last):\n  File \"C:\\Users\\李世旺\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 382, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\李世旺\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 325, in _get_module_from_name\n    __import__(name)\n  File \"C:\\Users\\李世旺\\AppData\\Local\\Temp\\casr-graph-ablation-l_yfmkm8\\small\\missing_provenance\\tests\\test_json_export.py\", line 7, in <module>\n    from exporter import export_json, read_rows\nImportError: cannot import name 'export_json' from 'exporter' (C:\\Users\\李世旺\\AppData\\Local\\Temp\\casr-graph-ablation-l_yfmkm8\\small\\missing_provenance\\src\\exporter.py). Did you mean: 'export_xml'?\n\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nFAILED (errors=1)\n",
           "reason": "command exited non-zero"
         },
         {
           "test_id": "retention",
           "status": "PASS",
           "return_code": 0,
-          "duration_seconds": 0.15599999999994907,
+          "duration_seconds": 0.17200000000002547,
           "stdout": "",
           "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.005s\n\nOK\n",
           "reason": "command exited successfully"
@@ -4668,15 +4668,15 @@
     "retained_modules_rewritten": 0,
     "impact": {
       "seed_artifacts": [
-        "src/xml_helpers.py",
-        "src/exporter.py"
+        "src/exporter.py",
+        "src/xml_helpers.py"
       ],
       "active_supported_artifacts": [
-        "src/retained_1.py",
-        "src/retained_0.py",
-        "src/summary.py",
         "src/checksum.py",
-        "src/exporter.py"
+        "src/retained_1.py",
+        "src/exporter.py",
+        "src/summary.py",
+        "src/retained_0.py"
       ],
       "exclusive_invalid_artifacts": [
         "src/xml_helpers.py"
@@ -4685,13 +4685,13 @@
         "src/exporter.py"
       ],
       "downstream_artifacts": [
-        "src/cli.py",
-        "src/checksum.py"
+        "src/checksum.py",
+        "src/cli.py"
       ],
       "unaffected_active_artifacts": [
         "src/summary.py",
-        "src/retained_1.py",
-        "src/retained_0.py"
+        "src/retained_0.py",
+        "src/retained_1.py"
       ]
     },
     "repair_plan": {
@@ -4786,14 +4786,14 @@
           "return_code": 0,
           "duration_seconds": 0.125,
           "stdout": "",
-          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n",
+          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.001s\n\nOK\n",
           "reason": "command exited successfully"
         },
         {
           "test_id": "retention",
           "status": "PASS",
           "return_code": 0,
-          "duration_seconds": 0.15699999999992542,
+          "duration_seconds": 0.1570000000001528,
           "stdout": "",
           "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.005s\n\nOK\n",
           "reason": "command exited successfully"

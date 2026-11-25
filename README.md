@@ -77,4 +77,4 @@ See [docs/cluster_environment_report.md](docs/cluster_environment_report.md), [d
 
 Every experiment must record its configuration, model identifier, prompts, tool trajectory, Git diffs, test outputs, token usage, and wall-clock time. Agent self-report is not accepted as verification evidence. `PASS`, `FAIL`, and `UNKNOWN` must remain distinct.
 
-See [docs/milestone_1_report.md](docs/milestone_1_report.md) for measured environment details and [docs/superpowers/plans/2026-11-25-casr-m2-prototype.md](docs/superpowers/plans/2026-11-25-casr-m2-prototype.md) for the next implementation plan.
+See [docs/milestone_1_report.md](docs/milestone_1_report.md) for measured environment details, [docs/superpowers/plans/2026-11-25-casr-m2-prototype.md](docs/superpowers/plans/2026-11-25-casr-m2-prototype.md) for the completed M2 plan, and [MVP_REPORT.md](MVP_REPORT.md) for the next research priorities.

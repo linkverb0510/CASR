@@ -1,8 +1,8 @@
 {
-  "created_at": "2026-11-25T16:49:50.802229+00:00",
+  "created_at": "2026-11-25T16:56:39.104356+00:00",
   "python": "3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]",
   "platform": "Windows-11-10.0.26200-SP0",
-  "code_revision": "unknown",
+  "code_revision": "7e77e74396d9e50f7df41c59874e17a852b93e02",
   "working_tree_dirty": true,
   "config": {
     "experiment_id": "casr-mvp-synthetic-v1",
