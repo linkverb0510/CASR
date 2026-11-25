@@ -2,6 +2,7 @@
 
 > 日期：2026-11-26
 > 状态：可运行的 Harness + Verifier MVP；结论限于离线合成实验。  
+> 开源仓库：https://github.com/linkverb0510/CASR
 > 本报告不包含模型 API 调用、真实 Coding Agent Benchmark 结果或统计显著性声称。
 
 ## 1. 研究问题

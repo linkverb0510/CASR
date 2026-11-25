@@ -65,3 +65,5 @@
 - 集群早期 CPU-only smoke 已通过；本轮 M2 复验尝试时旧 Jupyter 页面报错，尚无最新 M2 的 Linux 远程结果。
 - 独立审查已完成一次；Critical/Important 集中修复后完整套件为 82 passed、3 skipped。
 - 最终 Demo 与两套实验已在干净代码提交 `0bf2a02` 上重跑，元数据 `working_tree_dirty=false`；敏感环境标识与验证器路径已脱敏。
+- 已发布至 https://github.com/linkverb0510/CASR 。普通 Git HTTPS 被校园透明代理证书阻断，SSH 无法安全验证主机密钥；最终通过已认证的 GitHub CLI Git Database API 发布，未关闭 TLS 校验。
+- 发布后核验远端 main 的 4 个 commit SHA 与本地逐字一致，4 个 tree SHA 全部匹配；仅用于启动空仓库的临时 README 提交不在分支历史中。
