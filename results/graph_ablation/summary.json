@@ -1,0 +1,37 @@
+{
+  "experiment_type": "synthetic_provenance_fidelity_ablation",
+  "experiment_id": "casr-graph-fidelity-ablation-v1",
+  "model_api_called": false,
+  "case_count": 3,
+  "run_count": 9,
+  "variants": {
+    "complete": {
+      "repair_success_rate": 1.0,
+      "mean_decision_count": 9.0,
+      "mean_revalidate_count": 1.0,
+      "mean_retain_count": 6.0,
+      "mean_paths_written": 2.0
+    },
+    "missing_provenance": {
+      "repair_success_rate": 0.0,
+      "mean_decision_count": 7.0,
+      "mean_revalidate_count": 0.0,
+      "mean_retain_count": 7.0,
+      "mean_paths_written": 1.0
+    },
+    "spurious_dependency": {
+      "repair_success_rate": 1.0,
+      "mean_decision_count": 9.0,
+      "mean_revalidate_count": 2.0,
+      "mean_retain_count": 5.0,
+      "mean_paths_written": 2.0
+    }
+  },
+  "conclusion": "在该合成设定中，漏记需求到动作的溯源使 3/3 案例无法启动修复；加入一条伪依赖仍通过 3/3 验收，但把保留产物从 Retain 推到 Revalidate。因此溯源召回是正确性瓶颈，精度主要影响复核范围。",
+  "limitations": [
+    "三个案例共享同一模板，只改变保留模块数量，不能代表真实项目多样性。",
+    "伪依赖是人为注入的单边扰动，未测量真实 Agent 的溯源误差分布。",
+    "Revalidate 只扩大验证/复核计划，本实验的脚本化补丁未模拟额外人工成本。",
+    "单次运行，无统计显著性检验，未调用模型 API。"
+  ]
+}

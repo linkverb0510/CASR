@@ -1,0 +1,25 @@
+{
+  "platform": "Linux-5.15.0-187-generic-x86_64-with-glibc2.39",
+  "python_version": "3.12.3",
+  "cpu_count": 48,
+  "disk_free_bytes": 2220330248568832,
+  "dependencies": {
+    "GitPython": "3.2.1",
+    "networkx": "3.7",
+    "pydantic": "2.14.4",
+    "pytest": "9.2.0"
+  },
+  "model_configuration": {
+    "DEEPSEEK_API_KEY": "absent",
+    "DASHSCOPE_API_KEY": "absent",
+    "OPENAI_API_KEY": "absent",
+    "OPENAI_BASE_URL": "absent",
+    "ANTHROPIC_API_KEY": "absent",
+    "ANTHROPIC_BASE_URL": "absent",
+    "GEMINI_API_KEY": "absent",
+    "GOOGLE_API_KEY": "absent",
+    "AZURE_OPENAI_API_KEY": "absent",
+    "HF_TOKEN": "absent",
+    "HUGGINGFACE_HUB_TOKEN": "absent"
+  }
+}

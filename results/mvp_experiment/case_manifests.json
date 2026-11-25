@@ -1,0 +1,245 @@
+{
+  "small": {
+    "retained_modules": 2,
+    "pre_correction_files": {
+      "src/checksum.py": "8b755f616badd663998a8f3acaf99c3176204887ecedd798eb366b89258bf5a2",
+      "src/cli.py": "ef1abc4df17ecf161382a8e4b7a8a1f826e5086a5f351c628f69c26cebfcc253",
+      "src/exporter.py": "6a7fb62a9d98761fd21bc99ee36ea73f39262afc9aaed24d485af441c35a8884",
+      "src/retained_0.py": "f40984649caa6bf7bc818863f0e210b68e3b00f16dfc99997f1bd226c34b9c34",
+      "src/retained_1.py": "e13df8c44af5dea1e412403910b99cc5a48f2ccbf68a66b3374d6ab9cef9fc65",
+      "src/summary.py": "504491d1f2bb960189e59b4b844a33e7fc2a67398941c3b8d008ad6bcb2f7e09",
+      "src/xml_helpers.py": "d8313b379a858f183008f2f6198051d5bd7ca075d573902814a9666bfda819eb",
+      "tests/test_checksum.py": "a7728a5ca969094ef225ad055703f7bf1b082cddc0a9f1a1224460989e519f79",
+      "tests/test_retained.py": "36b519666fb7e83ec0826de8087788137ded13b4192421f1ccd775a38e6bdc18",
+      "tests/test_summary.py": "3861190fd25819d1cad1e7b97def8b75f78b78122b58c7f88a25edbe000a19cd"
+    },
+    "expected_final_files": {
+      "src/checksum.py": "8b755f616badd663998a8f3acaf99c3176204887ecedd798eb366b89258bf5a2",
+      "src/cli.py": "ef1abc4df17ecf161382a8e4b7a8a1f826e5086a5f351c628f69c26cebfcc253",
+      "src/exporter.py": "5e507b1e8f67016d8f2aaf0b7a65d30a677daa5d7140ae3c0b2d62c4897735bb",
+      "src/retained_0.py": "f40984649caa6bf7bc818863f0e210b68e3b00f16dfc99997f1bd226c34b9c34",
+      "src/retained_1.py": "e13df8c44af5dea1e412403910b99cc5a48f2ccbf68a66b3374d6ab9cef9fc65",
+      "src/summary.py": "504491d1f2bb960189e59b4b844a33e7fc2a67398941c3b8d008ad6bcb2f7e09",
+      "tests/test_checksum.py": "a7728a5ca969094ef225ad055703f7bf1b082cddc0a9f1a1224460989e519f79",
+      "tests/test_json_export.py": "421d57aa5863d23d47b09651719980a35e17fdffbed70c5056e668f839741aab",
+      "tests/test_retained.py": "36b519666fb7e83ec0826de8087788137ded13b4192421f1ccd775a38e6bdc18",
+      "tests/test_summary.py": "3861190fd25819d1cad1e7b97def8b75f78b78122b58c7f88a25edbe000a19cd"
+    },
+    "repair_plan": {
+      "correction_id": "C-small",
+      "decisions": [
+        {
+          "kind": "Retain",
+          "artifact_id": "src/checksum.py",
+          "reason": "artifact supports active requirements outside the impact set"
+        },
+        {
+          "kind": "Revalidate",
+          "artifact_id": "src/cli.py",
+          "reason": "artifact depends on an affected artifact"
+        },
+        {
+          "kind": "Modify",
+          "artifact_id": "src/exporter.py",
+          "reason": "artifact supports both invalid and active requirements"
+        },
+        {
+          "kind": "Retain",
+          "artifact_id": "src/retained_0.py",
+          "reason": "artifact supports active requirements outside the impact set"
+        },
+        {
+          "kind": "Retain",
+          "artifact_id": "src/retained_1.py",
+          "reason": "artifact supports active requirements outside the impact set"
+        },
+        {
+          "kind": "Retain",
+          "artifact_id": "src/summary.py",
+          "reason": "artifact supports active requirements outside the impact set"
+        },
+        {
+          "kind": "Revert",
+          "artifact_id": "src/xml_helpers.py",
+          "reason": "artifact exclusively supports invalid requirements and has recovery metadata"
+        }
+      ]
+    }
+  },
+  "medium": {
+    "retained_modules": 4,
+    "pre_correction_files": {
+      "src/checksum.py": "8b755f616badd663998a8f3acaf99c3176204887ecedd798eb366b89258bf5a2",
+      "src/cli.py": "ef1abc4df17ecf161382a8e4b7a8a1f826e5086a5f351c628f69c26cebfcc253",
+      "src/exporter.py": "6a7fb62a9d98761fd21bc99ee36ea73f39262afc9aaed24d485af441c35a8884",
+      "src/retained_0.py": "f40984649caa6bf7bc818863f0e210b68e3b00f16dfc99997f1bd226c34b9c34",
+      "src/retained_1.py": "e13df8c44af5dea1e412403910b99cc5a48f2ccbf68a66b3374d6ab9cef9fc65",
+      "src/retained_2.py": "3da6c4b355804b265ecef19dfe5945fe2790a8cc38dc9d0547fb1634c94cbbe7",
+      "src/retained_3.py": "b7286676d4708b372b1aa8922455b9070ca83d565120add116ceb6d3a1272314",
+      "src/summary.py": "504491d1f2bb960189e59b4b844a33e7fc2a67398941c3b8d008ad6bcb2f7e09",
+      "src/xml_helpers.py": "d8313b379a858f183008f2f6198051d5bd7ca075d573902814a9666bfda819eb",
+      "tests/test_checksum.py": "a7728a5ca969094ef225ad055703f7bf1b082cddc0a9f1a1224460989e519f79",
+      "tests/test_retained.py": "8eb2b1e9e6680faa1975d41cc1e707124289e4a1b60c7002c67c56d184244f9f",
+      "tests/test_summary.py": "3861190fd25819d1cad1e7b97def8b75f78b78122b58c7f88a25edbe000a19cd"
+    },
+    "expected_final_files": {
+      "src/checksum.py": "8b755f616badd663998a8f3acaf99c3176204887ecedd798eb366b89258bf5a2",
+      "src/cli.py": "ef1abc4df17ecf161382a8e4b7a8a1f826e5086a5f351c628f69c26cebfcc253",
+      "src/exporter.py": "5e507b1e8f67016d8f2aaf0b7a65d30a677daa5d7140ae3c0b2d62c4897735bb",
+      "src/retained_0.py": "f40984649caa6bf7bc818863f0e210b68e3b00f16dfc99997f1bd226c34b9c34",
+      "src/retained_1.py": "e13df8c44af5dea1e412403910b99cc5a48f2ccbf68a66b3374d6ab9cef9fc65",
+      "src/retained_2.py": "3da6c4b355804b265ecef19dfe5945fe2790a8cc38dc9d0547fb1634c94cbbe7",
+      "src/retained_3.py": "b7286676d4708b372b1aa8922455b9070ca83d565120add116ceb6d3a1272314",
+      "src/summary.py": "504491d1f2bb960189e59b4b844a33e7fc2a67398941c3b8d008ad6bcb2f7e09",
+      "tests/test_checksum.py": "a7728a5ca969094ef225ad055703f7bf1b082cddc0a9f1a1224460989e519f79",
+      "tests/test_json_export.py": "421d57aa5863d23d47b09651719980a35e17fdffbed70c5056e668f839741aab",
+      "tests/test_retained.py": "8eb2b1e9e6680faa1975d41cc1e707124289e4a1b60c7002c67c56d184244f9f",
+      "tests/test_summary.py": "3861190fd25819d1cad1e7b97def8b75f78b78122b58c7f88a25edbe000a19cd"
+    },
+    "repair_plan": {
+      "correction_id": "C-medium",
+      "decisions": [
+        {
+          "kind": "Retain",
+          "artifact_id": "src/checksum.py",
+          "reason": "artifact supports active requirements outside the impact set"
+        },
+        {
+          "kind": "Revalidate",
+          "artifact_id": "src/cli.py",
+          "reason": "artifact depends on an affected artifact"
+        },
+        {
+          "kind": "Modify",
+          "artifact_id": "src/exporter.py",
+          "reason": "artifact supports both invalid and active requirements"
+        },
+        {
+          "kind": "Retain",
+          "artifact_id": "src/retained_0.py",
+          "reason": "artifact supports active requirements outside the impact set"
+        },
+        {
+          "kind": "Retain",
+          "artifact_id": "src/retained_1.py",
+          "reason": "artifact supports active requirements outside the impact set"
+        },
+        {
+          "kind": "Retain",
+          "artifact_id": "src/retained_2.py",
+          "reason": "artifact supports active requirements outside the impact set"
+        },
+        {
+          "kind": "Retain",
+          "artifact_id": "src/retained_3.py",
+          "reason": "artifact supports active requirements outside the impact set"
+        },
+        {
+          "kind": "Retain",
+          "artifact_id": "src/summary.py",
+          "reason": "artifact supports active requirements outside the impact set"
+        },
+        {
+          "kind": "Revert",
+          "artifact_id": "src/xml_helpers.py",
+          "reason": "artifact exclusively supports invalid requirements and has recovery metadata"
+        }
+      ]
+    }
+  },
+  "large": {
+    "retained_modules": 6,
+    "pre_correction_files": {
+      "src/checksum.py": "8b755f616badd663998a8f3acaf99c3176204887ecedd798eb366b89258bf5a2",
+      "src/cli.py": "ef1abc4df17ecf161382a8e4b7a8a1f826e5086a5f351c628f69c26cebfcc253",
+      "src/exporter.py": "6a7fb62a9d98761fd21bc99ee36ea73f39262afc9aaed24d485af441c35a8884",
+      "src/retained_0.py": "f40984649caa6bf7bc818863f0e210b68e3b00f16dfc99997f1bd226c34b9c34",
+      "src/retained_1.py": "e13df8c44af5dea1e412403910b99cc5a48f2ccbf68a66b3374d6ab9cef9fc65",
+      "src/retained_2.py": "3da6c4b355804b265ecef19dfe5945fe2790a8cc38dc9d0547fb1634c94cbbe7",
+      "src/retained_3.py": "b7286676d4708b372b1aa8922455b9070ca83d565120add116ceb6d3a1272314",
+      "src/retained_4.py": "0b7f2af2cefe42be399646e5425f921a34d703504e0720f702f2747eace5ff40",
+      "src/retained_5.py": "d732ea776c80bfb7bd33ae016cf3ada47ae1f4775fe63435ad744dd34e054a74",
+      "src/summary.py": "504491d1f2bb960189e59b4b844a33e7fc2a67398941c3b8d008ad6bcb2f7e09",
+      "src/xml_helpers.py": "d8313b379a858f183008f2f6198051d5bd7ca075d573902814a9666bfda819eb",
+      "tests/test_checksum.py": "a7728a5ca969094ef225ad055703f7bf1b082cddc0a9f1a1224460989e519f79",
+      "tests/test_retained.py": "981897b80a2342cbe33f980c35c483eaaf8c0040cf7c19ff18ae261f01b8044c",
+      "tests/test_summary.py": "3861190fd25819d1cad1e7b97def8b75f78b78122b58c7f88a25edbe000a19cd"
+    },
+    "expected_final_files": {
+      "src/checksum.py": "8b755f616badd663998a8f3acaf99c3176204887ecedd798eb366b89258bf5a2",
+      "src/cli.py": "ef1abc4df17ecf161382a8e4b7a8a1f826e5086a5f351c628f69c26cebfcc253",
+      "src/exporter.py": "5e507b1e8f67016d8f2aaf0b7a65d30a677daa5d7140ae3c0b2d62c4897735bb",
+      "src/retained_0.py": "f40984649caa6bf7bc818863f0e210b68e3b00f16dfc99997f1bd226c34b9c34",
+      "src/retained_1.py": "e13df8c44af5dea1e412403910b99cc5a48f2ccbf68a66b3374d6ab9cef9fc65",
+      "src/retained_2.py": "3da6c4b355804b265ecef19dfe5945fe2790a8cc38dc9d0547fb1634c94cbbe7",
+      "src/retained_3.py": "b7286676d4708b372b1aa8922455b9070ca83d565120add116ceb6d3a1272314",
+      "src/retained_4.py": "0b7f2af2cefe42be399646e5425f921a34d703504e0720f702f2747eace5ff40",
+      "src/retained_5.py": "d732ea776c80bfb7bd33ae016cf3ada47ae1f4775fe63435ad744dd34e054a74",
+      "src/summary.py": "504491d1f2bb960189e59b4b844a33e7fc2a67398941c3b8d008ad6bcb2f7e09",
+      "tests/test_checksum.py": "a7728a5ca969094ef225ad055703f7bf1b082cddc0a9f1a1224460989e519f79",
+      "tests/test_json_export.py": "421d57aa5863d23d47b09651719980a35e17fdffbed70c5056e668f839741aab",
+      "tests/test_retained.py": "981897b80a2342cbe33f980c35c483eaaf8c0040cf7c19ff18ae261f01b8044c",
+      "tests/test_summary.py": "3861190fd25819d1cad1e7b97def8b75f78b78122b58c7f88a25edbe000a19cd"
+    },
+    "repair_plan": {
+      "correction_id": "C-large",
+      "decisions": [
+        {
+          "kind": "Retain",
+          "artifact_id": "src/checksum.py",
+          "reason": "artifact supports active requirements outside the impact set"
+        },
+        {
+          "kind": "Revalidate",
+          "artifact_id": "src/cli.py",
+          "reason": "artifact depends on an affected artifact"
+        },
+        {
+          "kind": "Modify",
+          "artifact_id": "src/exporter.py",
+          "reason": "artifact supports both invalid and active requirements"
+        },
+        {
+          "kind": "Retain",
+          "artifact_id": "src/retained_0.py",
+          "reason": "artifact supports active requirements outside the impact set"
+        },
+        {
+          "kind": "Retain",
+          "artifact_id": "src/retained_1.py",
+          "reason": "artifact supports active requirements outside the impact set"
+        },
+        {
+          "kind": "Retain",
+          "artifact_id": "src/retained_2.py",
+          "reason": "artifact supports active requirements outside the impact set"
+        },
+        {
+          "kind": "Retain",
+          "artifact_id": "src/retained_3.py",
+          "reason": "artifact supports active requirements outside the impact set"
+        },
+        {
+          "kind": "Retain",
+          "artifact_id": "src/retained_4.py",
+          "reason": "artifact supports active requirements outside the impact set"
+        },
+        {
+          "kind": "Retain",
+          "artifact_id": "src/retained_5.py",
+          "reason": "artifact supports active requirements outside the impact set"
+        },
+        {
+          "kind": "Retain",
+          "artifact_id": "src/summary.py",
+          "reason": "artifact supports active requirements outside the impact set"
+        },
+        {
+          "kind": "Revert",
+          "artifact_id": "src/xml_helpers.py",
+          "reason": "artifact exclusively supports invalid requirements and has recovery metadata"
+        }
+      ]
+    }
+  }
+}

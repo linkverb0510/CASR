@@ -1,0 +1,23 @@
+diff --git a/src/exporter.py b/src/exporter.py
+--- a/src/exporter.py
++++ b/src/exporter.py
+@@ -1,16 +1,11 @@
+ import csv
+-import xml.etree.ElementTree as ET
++import json
+ 
+ 
+ def read_rows(path):
+     with open(path, newline="", encoding="utf-8") as handle:
+         return list(csv.DictReader(handle))
+ 
+ 
+-def export_xml(rows):
+-    root = ET.Element("rows")
+-    for row in rows:
+-        item = ET.SubElement(root, "row")
+-        for key, value in row.items():
+-            ET.SubElement(item, key).text = value
+-    return ET.tostring(root, encoding="unicode")
++def export_json(rows):
++    return json.dumps(rows, ensure_ascii=False, sort_keys=True)

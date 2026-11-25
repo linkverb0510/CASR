@@ -1,0 +1,54 @@
+{
+  "R-checksum": {
+    "requirement_id": "R-checksum",
+    "versions": [
+      {
+        "content": "Provide stable checksum",
+        "created_at": "2026-01-01T00:00:00Z",
+        "requirement_id": "R-checksum",
+        "status": "Active",
+        "superseded_by": null,
+        "version": 1
+      }
+    ]
+  },
+  "R-json": {
+    "requirement_id": "R-json",
+    "versions": [
+      {
+        "content": "不再输出 XML，改用标准库 JSON；checksum 和 summary 必须保留。",
+        "created_at": "2026-01-01T00:00:00Z",
+        "requirement_id": "R-json",
+        "status": "Active",
+        "superseded_by": null,
+        "version": 1
+      }
+    ]
+  },
+  "R-summary": {
+    "requirement_id": "R-summary",
+    "versions": [
+      {
+        "content": "Provide row summary",
+        "created_at": "2026-01-01T00:00:00Z",
+        "requirement_id": "R-summary",
+        "status": "Active",
+        "superseded_by": null,
+        "version": 1
+      }
+    ]
+  },
+  "R-xml": {
+    "requirement_id": "R-xml",
+    "versions": [
+      {
+        "content": "Export XML",
+        "created_at": "2026-01-01T00:00:00Z",
+        "requirement_id": "R-xml",
+        "status": "Superseded",
+        "superseded_by": "R-json",
+        "version": 1
+      }
+    ]
+  }
+}

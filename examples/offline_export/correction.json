@@ -1,0 +1,8 @@
+{
+  "correction_id": "C-xml-to-json",
+  "correction_type": "SUPERSEDE",
+  "target_requirement_id": "R-xml",
+  "new_requirement_id": "R-json",
+  "content": "不再输出 XML，改用标准库 JSON；checksum 和 summary 必须保留。",
+  "created_at": "2026-01-01T00:00:00+00:00"
+}

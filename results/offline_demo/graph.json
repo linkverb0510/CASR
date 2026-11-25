@@ -1,0 +1,311 @@
+{
+  "nodes": [
+    {
+      "id": "action:A-checksum",
+      "kind": "action",
+      "data": {
+        "action_id": "A-checksum",
+        "action_type": "scripted_edit",
+        "description": "A-checksum",
+        "timestamp": "2026-01-01T00:00:00Z",
+        "related_requirements": [],
+        "affected_artifacts": [],
+        "execution_result": null
+      }
+    },
+    {
+      "id": "action:A-cli",
+      "kind": "action",
+      "data": {
+        "action_id": "A-cli",
+        "action_type": "scripted_edit",
+        "description": "A-cli",
+        "timestamp": "2026-01-01T00:00:00Z",
+        "related_requirements": [],
+        "affected_artifacts": [],
+        "execution_result": null
+      }
+    },
+    {
+      "id": "action:A-export",
+      "kind": "action",
+      "data": {
+        "action_id": "A-export",
+        "action_type": "scripted_edit",
+        "description": "A-export",
+        "timestamp": "2026-01-01T00:00:00Z",
+        "related_requirements": [],
+        "affected_artifacts": [],
+        "execution_result": null
+      }
+    },
+    {
+      "id": "action:A-json",
+      "kind": "action",
+      "data": {
+        "action_id": "A-json",
+        "action_type": "scripted_edit",
+        "description": "A-json",
+        "timestamp": "2026-01-01T00:00:00Z",
+        "related_requirements": [],
+        "affected_artifacts": [],
+        "execution_result": null
+      }
+    },
+    {
+      "id": "action:A-summary",
+      "kind": "action",
+      "data": {
+        "action_id": "A-summary",
+        "action_type": "scripted_edit",
+        "description": "A-summary",
+        "timestamp": "2026-01-01T00:00:00Z",
+        "related_requirements": [],
+        "affected_artifacts": [],
+        "execution_result": null
+      }
+    },
+    {
+      "id": "artifact:src/checksum.py",
+      "kind": "artifact",
+      "data": {
+        "artifact_id": "src/checksum.py",
+        "path": "src/checksum.py",
+        "baseline_blob": null,
+        "current_blob": "bd0e6348fd38650d63ef0d0a48a02238a46916ab",
+        "produced_by": [],
+        "dependencies": [],
+        "evidence_ids": []
+      }
+    },
+    {
+      "id": "artifact:src/cli.py",
+      "kind": "artifact",
+      "data": {
+        "artifact_id": "src/cli.py",
+        "path": "src/cli.py",
+        "baseline_blob": null,
+        "current_blob": "7600d0ed42f422b29e77df14f4c5a1d56ad1f515",
+        "produced_by": [],
+        "dependencies": [],
+        "evidence_ids": []
+      }
+    },
+    {
+      "id": "artifact:src/exporter.py",
+      "kind": "artifact",
+      "data": {
+        "artifact_id": "src/exporter.py",
+        "path": "src/exporter.py",
+        "baseline_blob": null,
+        "current_blob": "275a8935530b0360ca624d7055f1cf938b7a838e",
+        "produced_by": [],
+        "dependencies": [],
+        "evidence_ids": []
+      }
+    },
+    {
+      "id": "artifact:src/summary.py",
+      "kind": "artifact",
+      "data": {
+        "artifact_id": "src/summary.py",
+        "path": "src/summary.py",
+        "baseline_blob": null,
+        "current_blob": "fd08e8cb625c42b5bb2ee5329523633c17c0e13b",
+        "produced_by": [],
+        "dependencies": [],
+        "evidence_ids": []
+      }
+    },
+    {
+      "id": "artifact:src/xml_helpers.py",
+      "kind": "artifact",
+      "data": {
+        "artifact_id": "src/xml_helpers.py",
+        "path": "src/xml_helpers.py",
+        "baseline_blob": null,
+        "current_blob": "4fedf4aa5f01d40159a341a0f7f4812543be0c11",
+        "produced_by": [],
+        "dependencies": [],
+        "evidence_ids": []
+      }
+    },
+    {
+      "id": "artifact:tests/test_checksum.py",
+      "kind": "artifact",
+      "data": {
+        "artifact_id": "tests/test_checksum.py",
+        "path": "tests/test_checksum.py",
+        "baseline_blob": null,
+        "current_blob": "b2b81f73f98f692fed35f934f4e9605bf649888b",
+        "produced_by": [],
+        "dependencies": [],
+        "evidence_ids": []
+      }
+    },
+    {
+      "id": "artifact:tests/test_summary.py",
+      "kind": "artifact",
+      "data": {
+        "artifact_id": "tests/test_summary.py",
+        "path": "tests/test_summary.py",
+        "baseline_blob": null,
+        "current_blob": "ac07f3a24a571def5658a121aed12d9742c53898",
+        "produced_by": [],
+        "dependencies": [],
+        "evidence_ids": []
+      }
+    },
+    {
+      "id": "artifact:tests/test_xml_export.py",
+      "kind": "artifact",
+      "data": {
+        "artifact_id": "tests/test_xml_export.py",
+        "path": "tests/test_xml_export.py",
+        "baseline_blob": null,
+        "current_blob": "fa917b1b234a2feb52e08264057ac283e652468f",
+        "produced_by": [],
+        "dependencies": [],
+        "evidence_ids": []
+      }
+    },
+    {
+      "id": "requirement:R-checksum:v1",
+      "kind": "requirement",
+      "data": {
+        "requirement_id": "R-checksum",
+        "version": 1,
+        "content": "Provide stable checksum",
+        "status": "Active",
+        "created_at": "2026-01-01T00:00:00Z",
+        "superseded_by": null
+      }
+    },
+    {
+      "id": "requirement:R-json:v1",
+      "kind": "requirement",
+      "data": {
+        "requirement_id": "R-json",
+        "version": 1,
+        "content": "不再输出 XML，改用标准库 JSON；checksum 和 summary 必须保留。",
+        "status": "Active",
+        "created_at": "2026-01-01T00:00:00Z",
+        "superseded_by": null
+      }
+    },
+    {
+      "id": "requirement:R-summary:v1",
+      "kind": "requirement",
+      "data": {
+        "requirement_id": "R-summary",
+        "version": 1,
+        "content": "Provide row summary",
+        "status": "Active",
+        "created_at": "2026-01-01T00:00:00Z",
+        "superseded_by": null
+      }
+    },
+    {
+      "id": "requirement:R-xml:v1",
+      "kind": "requirement",
+      "data": {
+        "requirement_id": "R-xml",
+        "version": 1,
+        "content": "Export XML",
+        "status": "Active",
+        "created_at": "2026-01-01T00:00:00Z",
+        "superseded_by": null
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "action:A-checksum",
+      "target": "artifact:src/checksum.py",
+      "relation": "Produces",
+      "relation_source": "manual",
+      "confidence": 1.0,
+      "human_verified": true
+    },
+    {
+      "source": "action:A-export",
+      "target": "artifact:src/exporter.py",
+      "relation": "Produces",
+      "relation_source": "manual",
+      "confidence": 1.0,
+      "human_verified": true
+    },
+    {
+      "source": "action:A-export",
+      "target": "artifact:src/xml_helpers.py",
+      "relation": "Produces",
+      "relation_source": "manual",
+      "confidence": 1.0,
+      "human_verified": true
+    },
+    {
+      "source": "action:A-export",
+      "target": "artifact:tests/test_xml_export.py",
+      "relation": "Produces",
+      "relation_source": "manual",
+      "confidence": 1.0,
+      "human_verified": true
+    },
+    {
+      "source": "action:A-json",
+      "target": "artifact:src/exporter.py",
+      "relation": "Produces",
+      "relation_source": "manual",
+      "confidence": 1.0,
+      "human_verified": true
+    },
+    {
+      "source": "action:A-summary",
+      "target": "artifact:src/summary.py",
+      "relation": "Produces",
+      "relation_source": "manual",
+      "confidence": 1.0,
+      "human_verified": true
+    },
+    {
+      "source": "artifact:src/cli.py",
+      "target": "artifact:src/exporter.py",
+      "relation": "Depends-on",
+      "relation_source": "manual",
+      "confidence": 1.0,
+      "human_verified": true
+    },
+    {
+      "source": "requirement:R-checksum:v1",
+      "target": "action:A-checksum",
+      "relation": "Motivates",
+      "relation_source": "manual",
+      "confidence": 1.0,
+      "human_verified": true
+    },
+    {
+      "source": "requirement:R-json:v1",
+      "target": "action:A-json",
+      "relation": "Motivates",
+      "relation_source": "manual",
+      "confidence": 1.0,
+      "human_verified": true
+    },
+    {
+      "source": "requirement:R-summary:v1",
+      "target": "action:A-summary",
+      "relation": "Motivates",
+      "relation_source": "manual",
+      "confidence": 1.0,
+      "human_verified": true
+    },
+    {
+      "source": "requirement:R-xml:v1",
+      "target": "action:A-export",
+      "relation": "Motivates",
+      "relation_source": "manual",
+      "confidence": 1.0,
+      "human_verified": true
+    }
+  ]
+}

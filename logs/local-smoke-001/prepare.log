@@ -1,0 +1,1 @@
+{"dependencies": {"GitPython": "3.2.1", "networkx": "3.7", "pydantic": "2.14.4", "pytest": "9.2.0"}, "python": "C:/Barsix/Learning_Repo/projects/CASR/.venv/Scripts/python.exe", "python_version": "3.12.0", "ready": true, "root": "C:/Barsix/Learning_Repo/projects/CASR"}

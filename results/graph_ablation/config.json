@@ -1,0 +1,13 @@
+{
+  "experiment_id": "casr-graph-fidelity-ablation-v1",
+  "hypothesis": "溯源图漏记会使选择性修复漏掉失效产物并损害正确性；伪依赖主要扩大复核范围，而不一定导致错误。",
+  "cases": [
+    {"case_id": "small", "retained_modules": 2},
+    {"case_id": "medium", "retained_modules": 4},
+    {"case_id": "large", "retained_modules": 6}
+  ],
+  "variants": ["complete", "missing_provenance", "spurious_dependency"],
+  "repetitions": 1,
+  "model_api_called": false,
+  "environment": "local temporary Git workspaces; Python unittest verifier"
+}

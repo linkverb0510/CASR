@@ -1,0 +1,13 @@
+{
+  "experiment_id": "casr-mvp-synthetic-v1",
+  "hypothesis": "在共享产物必须修改、存在专属失效产物和下游依赖时，选择性修复能保持与整体重建相同的正确性，同时避免重写仍有效的保留产物。",
+  "policies": ["no_repair", "full_rebuild", "casr_selective"],
+  "cases": [
+    {"case_id": "small", "retained_modules": 2},
+    {"case_id": "medium", "retained_modules": 4},
+    {"case_id": "large", "retained_modules": 6}
+  ],
+  "repetitions": 1,
+  "model_api_called": false,
+  "environment": "local temporary Git workspaces; Python unittest verifier"
+}

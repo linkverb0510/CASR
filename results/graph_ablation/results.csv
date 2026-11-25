@@ -1,0 +1,10 @@
+case_id,variant,retained_modules,repair_success,active_requirement,retention,decision_count,applied_count,total_paths_written,paths_deleted,retained_modules_rewritten
+large,complete,6,True,PASS,PASS,11,2,2,1,0
+large,missing_provenance,6,False,FAIL,PASS,9,0,1,0,0
+large,spurious_dependency,6,True,PASS,PASS,11,2,2,1,0
+medium,complete,4,True,PASS,PASS,9,2,2,1,0
+medium,missing_provenance,4,False,FAIL,PASS,7,0,1,0,0
+medium,spurious_dependency,4,True,PASS,PASS,9,2,2,1,0
+small,complete,2,True,PASS,PASS,7,2,2,1,0
+small,missing_provenance,2,False,FAIL,PASS,5,0,1,0,0
+small,spurious_dependency,2,True,PASS,PASS,7,2,2,1,0

@@ -1,0 +1,26 @@
+{
+  "seed_artifacts": [
+    "src/xml_helpers.py",
+    "src/exporter.py",
+    "tests/test_xml_export.py"
+  ],
+  "active_supported_artifacts": [
+    "src/exporter.py",
+    "src/summary.py",
+    "src/checksum.py"
+  ],
+  "exclusive_invalid_artifacts": [
+    "src/xml_helpers.py",
+    "tests/test_xml_export.py"
+  ],
+  "shared_artifacts": [
+    "src/exporter.py"
+  ],
+  "downstream_artifacts": [
+    "src/cli.py"
+  ],
+  "unaffected_active_artifacts": [
+    "src/summary.py",
+    "src/checksum.py"
+  ]
+}

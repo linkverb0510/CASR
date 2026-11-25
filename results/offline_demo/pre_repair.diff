@@ -1,0 +1,147 @@
+diff --git a/src/checksum.py b/src/checksum.py
+new file mode 100644
+index 0000000..bd0e634
+--- /dev/null
++++ b/src/checksum.py
+@@ -0,0 +1,6 @@
++import hashlib
++
++
++def checksum_rows(rows):
++    payload = "|".join(f"{row['name']}={row['value']}" for row in rows)
++    return hashlib.sha256(payload.encode("utf-8")).hexdigest()
+diff --git a/src/cli.py b/src/cli.py
+new file mode 100644
+index 0000000..7600d0e
+--- /dev/null
++++ b/src/cli.py
+@@ -0,0 +1,14 @@
++from exporter import export_xml, read_rows
++from checksum import checksum_rows
++from summary import summarize
++
++
++def main(path="data/input.csv"):
++    rows = read_rows(path)
++    print(export_xml(rows))
++    print(checksum_rows(rows))
++    print(summarize(rows))
++
++
++if __name__ == "__main__":
++    main()
+diff --git a/src/exporter.py b/src/exporter.py
+new file mode 100644
+index 0000000..275a893
+--- /dev/null
++++ b/src/exporter.py
+@@ -0,0 +1,16 @@
++import csv
++import xml.etree.ElementTree as ET
++
++
++def read_rows(path):
++    with open(path, newline="", encoding="utf-8") as handle:
++        return list(csv.DictReader(handle))
++
++
++def export_xml(rows):
++    root = ET.Element("rows")
++    for row in rows:
++        item = ET.SubElement(root, "row")
++        for key, value in row.items():
++            ET.SubElement(item, key).text = value
++    return ET.tostring(root, encoding="unicode")
+diff --git a/src/summary.py b/src/summary.py
+new file mode 100644
+index 0000000..fd08e8c
+--- /dev/null
++++ b/src/summary.py
+@@ -0,0 +1,3 @@
++def summarize(rows):
++    values = [int(row["value"]) for row in rows]
++    return {"count": len(values), "total": sum(values)}
+diff --git a/src/xml_helpers.py b/src/xml_helpers.py
+new file mode 100644
+index 0000000..4fedf4a
+--- /dev/null
++++ b/src/xml_helpers.py
+@@ -0,0 +1,5 @@
++import xml.etree.ElementTree as ET
++
++
++def parse_xml(payload):
++    return ET.fromstring(payload)
+diff --git a/tests/test_checksum.py b/tests/test_checksum.py
+new file mode 100644
+index 0000000..b2b81f7
+--- /dev/null
++++ b/tests/test_checksum.py
+@@ -0,0 +1,19 @@
++import sys
++import unittest
++from pathlib import Path
++
++sys.path.insert(0, str(Path(__file__).parents[1] / "src"))
++
++from checksum import checksum_rows
++from exporter import read_rows
++
++
++class ChecksumTest(unittest.TestCase):
++    def test_checksum_is_stable(self):
++        rows = read_rows("data/input.csv")
++        self.assertEqual(len(checksum_rows(rows)), 64)
++        self.assertEqual(checksum_rows(rows), checksum_rows(rows))
++
++
++if __name__ == "__main__":
++    unittest.main()
+diff --git a/tests/test_summary.py b/tests/test_summary.py
+new file mode 100644
+index 0000000..ac07f3a
+--- /dev/null
++++ b/tests/test_summary.py
+@@ -0,0 +1,17 @@
++import sys
++import unittest
++from pathlib import Path
++
++sys.path.insert(0, str(Path(__file__).parents[1] / "src"))
++
++from exporter import read_rows
++from summary import summarize
++
++
++class SummaryTest(unittest.TestCase):
++    def test_summary(self):
++        self.assertEqual(summarize(read_rows("data/input.csv")), {"count": 3, "total": 60})
++
++
++if __name__ == "__main__":
++    unittest.main()
+diff --git a/tests/test_xml_export.py b/tests/test_xml_export.py
+new file mode 100644
+index 0000000..fa917b1
+--- /dev/null
++++ b/tests/test_xml_export.py
+@@ -0,0 +1,19 @@
++import sys
++import unittest
++from pathlib import Path
++
++sys.path.insert(0, str(Path(__file__).parents[1] / "src"))
++
++from exporter import export_xml, read_rows
++
++
++class XmlExportTest(unittest.TestCase):
++    def test_exports_xml(self):
++        rows = read_rows("data/input.csv")
++        payload = export_xml(rows)
++        self.assertIn("<name>alice</name>", payload)
++        self.assertIn("<value>10</value>", payload)
++
++
++if __name__ == "__main__":
++    unittest.main()

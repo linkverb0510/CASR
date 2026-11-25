@@ -1,0 +1,13 @@
+{
+  "demo_type": "scripted_harness_demo",
+  "overall": "PASS",
+  "correction_id": "C-xml-to-json",
+  "decision_counts": {
+    "Revert": 2,
+    "Modify": 1,
+    "Revalidate": 1,
+    "Retain": 2
+  },
+  "model_api_called": false,
+  "fixture_root": "examples/offline_export"
+}

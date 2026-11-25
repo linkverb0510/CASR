@@ -1,0 +1,35 @@
+{
+  "correction_id": "C-xml-to-json",
+  "decisions": [
+    {
+      "kind": "Retain",
+      "artifact_id": "src/checksum.py",
+      "reason": "artifact supports active requirements outside the impact set"
+    },
+    {
+      "kind": "Revalidate",
+      "artifact_id": "src/cli.py",
+      "reason": "artifact depends on an affected artifact"
+    },
+    {
+      "kind": "Modify",
+      "artifact_id": "src/exporter.py",
+      "reason": "artifact supports both invalid and active requirements"
+    },
+    {
+      "kind": "Retain",
+      "artifact_id": "src/summary.py",
+      "reason": "artifact supports active requirements outside the impact set"
+    },
+    {
+      "kind": "Revert",
+      "artifact_id": "src/xml_helpers.py",
+      "reason": "artifact exclusively supports invalid requirements and has recovery metadata"
+    },
+    {
+      "kind": "Revert",
+      "artifact_id": "tests/test_xml_export.py",
+      "reason": "artifact exclusively supports invalid requirements and has recovery metadata"
+    }
+  ]
+}
