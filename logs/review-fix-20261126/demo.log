@@ -1,0 +1,5 @@
+command: uv run python scripts/demo_offline.py --output-dir results/offline_demo
+exit_code: 0
+code_revision: 0bf2a02c9350f71469ffdcbcd8402ca39dd095c1
+result: overall=PASS; Revert=2; Modify=1; Revalidate=1; Retain=2; model_api_called=false
+evidence: results/offline_demo/run_summary.json

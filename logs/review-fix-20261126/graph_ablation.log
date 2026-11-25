@@ -1,0 +1,6 @@
+command: uv run python scripts/run_graph_ablation.py --config experiments/graph_ablation.json --output-dir results/graph_ablation
+exit_code: 0
+code_revision: 0bf2a02c9350f71469ffdcbcd8402ca39dd095c1
+source_working_tree_dirty: false
+result: runs=9; complete=3/3; missing_provenance=0/3; spurious_dependency=3/3; model_api_called=false
+evidence: results/graph_ablation/run_metadata.json; results/graph_ablation/summary.json

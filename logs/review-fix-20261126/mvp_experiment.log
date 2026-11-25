@@ -1,0 +1,6 @@
+command: uv run python scripts/run_mvp_experiment.py --config experiments/mvp_synthetic.json --output-dir results/mvp_experiment
+exit_code: 0
+code_revision: 0bf2a02c9350f71469ffdcbcd8402ca39dd095c1
+source_working_tree_dirty: false
+result: runs=9; no_repair=0/3; full_rebuild=3/3; casr_selective=3/3; mean_paths_written=1/14/2; model_api_called=false
+evidence: results/mvp_experiment/run_metadata.json; results/mvp_experiment/summary.json

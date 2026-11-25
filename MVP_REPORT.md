@@ -90,7 +90,7 @@ CASR 的核心假设是：把需求版本、动作、产物和证据组织为可
 
 ## 6. 复现
 
-环境要求：Python 3.12、Git、`uv`。
+环境要求：Python 3.12、Git、`uv`。最终本地验证为 **82 passed、3 skipped**；3 项跳过均为 Windows 平台限制。最终实验元数据绑定代码提交 `0bf2a02c9350f71469ffdcbcd8402ca39dd095c1`，源码与配置范围 `working_tree_dirty=false`。
 
 ```bash
 uv sync

@@ -61,6 +61,9 @@ Thumbs.db
 !/logs/review-fix-20261126/
 /logs/review-fix-20261126/*
 !/logs/review-fix-20261126/pytest.log
+!/logs/review-fix-20261126/demo.log
+!/logs/review-fix-20261126/mvp_experiment.log
+!/logs/review-fix-20261126/graph_ablation.log
 !/logs/local-smoke-001/
 /logs/local-smoke-001/*
 !/logs/local-smoke-001/environment.json

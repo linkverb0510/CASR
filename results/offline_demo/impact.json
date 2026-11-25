@@ -5,8 +5,8 @@
     "tests/test_xml_export.py"
   ],
   "active_supported_artifacts": [
-    "src/exporter.py",
     "src/summary.py",
+    "src/exporter.py",
     "src/checksum.py"
   ],
   "exclusive_invalid_artifacts": [

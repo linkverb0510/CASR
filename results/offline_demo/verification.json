@@ -13,7 +13,7 @@
       "test_id": "checksum_retention",
       "status": "PASS",
       "return_code": 0,
-      "duration_seconds": 0.1410000000000764,
+      "duration_seconds": 0.13999999999987267,
       "stdout": "",
       "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n",
       "reason": "command exited successfully"

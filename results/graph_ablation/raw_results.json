@@ -19,18 +19,18 @@
     "retained_modules_rewritten": 0,
     "impact": {
       "seed_artifacts": [
-        "src/exporter.py",
-        "src/xml_helpers.py"
+        "src/xml_helpers.py",
+        "src/exporter.py"
       ],
       "active_supported_artifacts": [
-        "src/checksum.py",
         "src/retained_2.py",
+        "src/retained_3.py",
         "src/retained_1.py",
         "src/retained_5.py",
+        "src/checksum.py",
         "src/retained_4.py",
-        "src/retained_3.py",
-        "src/exporter.py",
         "src/summary.py",
+        "src/exporter.py",
         "src/retained_0.py"
       ],
       "exclusive_invalid_artifacts": [
@@ -43,12 +43,12 @@
         "src/cli.py"
       ],
       "unaffected_active_artifacts": [
-        "src/checksum.py",
         "src/retained_2.py",
+        "src/retained_3.py",
         "src/retained_1.py",
         "src/retained_5.py",
+        "src/checksum.py",
         "src/retained_4.py",
-        "src/retained_3.py",
         "src/summary.py",
         "src/retained_0.py"
       ]
@@ -187,7 +187,7 @@
           "test_id": "active_json",
           "status": "PASS",
           "return_code": 0,
-          "duration_seconds": 0.125,
+          "duration_seconds": 0.1410000000000764,
           "stdout": "",
           "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n",
           "reason": "command exited successfully"
@@ -196,9 +196,9 @@
           "test_id": "retention",
           "status": "PASS",
           "return_code": 0,
-          "duration_seconds": 0.15599999999994907,
+          "duration_seconds": 0.13999999999987267,
           "stdout": "",
-          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.014s\n\nOK\n",
+          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.013s\n\nOK\n",
           "reason": "command exited successfully"
         }
       ]
@@ -278,6 +278,8 @@
             "path": "src/checksum.py",
             "baseline_blob": null,
             "current_blob": "aa229db300b483f8c1600d854f5f137f5ba6cf41",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -291,6 +293,8 @@
             "path": "src/cli.py",
             "baseline_blob": null,
             "current_blob": "c8ff4845818564ae2514fd279525c8e0a6c8aae3",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -304,6 +308,8 @@
             "path": "src/exporter.py",
             "baseline_blob": null,
             "current_blob": "6623e512fcfc7d108ecd53b086321d4a0876a9c1",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -317,6 +323,8 @@
             "path": "src/retained_0.py",
             "baseline_blob": null,
             "current_blob": "39045a6c7986a562fb62271b50531c1f52de5018",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -330,6 +338,8 @@
             "path": "src/retained_1.py",
             "baseline_blob": null,
             "current_blob": "31ba3a2f0e57fd4b44f0d1bbcd1700a33a3dcca6",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -343,6 +353,8 @@
             "path": "src/retained_2.py",
             "baseline_blob": null,
             "current_blob": "edf7ed7ad5d053e38c3b9224d3068a57e8ee63e7",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -356,6 +368,8 @@
             "path": "src/retained_3.py",
             "baseline_blob": null,
             "current_blob": "ebef711bd6eeff37e59b29711d2ffe6f31a5d4b9",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -369,6 +383,8 @@
             "path": "src/retained_4.py",
             "baseline_blob": null,
             "current_blob": "97089ca8dd4717903cdd1ae96a34a2aa205d4c70",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -382,6 +398,8 @@
             "path": "src/retained_5.py",
             "baseline_blob": null,
             "current_blob": "523150c76903d8c50e99337acf442fc0f13f29ad",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -395,6 +413,8 @@
             "path": "src/summary.py",
             "baseline_blob": null,
             "current_blob": "a617a54d8746d4b3c20f0d59d97149d3ca98be5a",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -408,6 +428,8 @@
             "path": "src/xml_helpers.py",
             "baseline_blob": null,
             "current_blob": "9ab17b21e6746a249058bf9520c87874777930b7",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -421,6 +443,8 @@
             "path": "tests/test_checksum.py",
             "baseline_blob": null,
             "current_blob": "cb7d5387166218f1c06c6300ea537d1b2ae76657",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -434,6 +458,8 @@
             "path": "tests/test_retained.py",
             "baseline_blob": null,
             "current_blob": "4f63d87d154288b3692fea04c2d295f0f738eae6",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -447,6 +473,8 @@
             "path": "tests/test_summary.py",
             "baseline_blob": null,
             "current_blob": "dda0317030c3e5be92adf24676b8c8fe4f3b8f7e",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -520,7 +548,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-json",
@@ -528,7 +557,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-retained",
@@ -536,7 +566,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-retained",
@@ -544,7 +575,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-retained",
@@ -552,7 +584,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-retained",
@@ -560,7 +593,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-retained",
@@ -568,7 +602,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-retained",
@@ -576,7 +611,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-summary",
@@ -584,7 +620,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-xml",
@@ -592,7 +629,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-xml",
@@ -600,7 +638,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "artifact:src/cli.py",
@@ -608,7 +647,8 @@
           "relation": "Depends-on",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "requirement:R-checksum:v1",
@@ -616,7 +656,8 @@
           "relation": "Motivates",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "requirement:R-json:v1",
@@ -624,7 +665,8 @@
           "relation": "Motivates",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "requirement:R-retained:v1",
@@ -632,7 +674,8 @@
           "relation": "Motivates",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "requirement:R-summary:v1",
@@ -640,7 +683,8 @@
           "relation": "Motivates",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "requirement:R-xml:v1",
@@ -648,7 +692,8 @@
           "relation": "Motivates",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         }
       ]
     }
@@ -671,28 +716,28 @@
     "impact": {
       "seed_artifacts": [],
       "active_supported_artifacts": [
-        "src/checksum.py",
         "src/retained_2.py",
+        "src/retained_3.py",
         "src/retained_1.py",
         "src/retained_5.py",
+        "src/checksum.py",
         "src/retained_4.py",
-        "src/retained_3.py",
-        "src/exporter.py",
         "src/summary.py",
+        "src/exporter.py",
         "src/retained_0.py"
       ],
       "exclusive_invalid_artifacts": [],
       "shared_artifacts": [],
       "downstream_artifacts": [],
       "unaffected_active_artifacts": [
-        "src/checksum.py",
         "src/retained_2.py",
+        "src/retained_3.py",
         "src/retained_1.py",
         "src/retained_5.py",
+        "src/checksum.py",
         "src/retained_4.py",
-        "src/retained_3.py",
-        "src/exporter.py",
         "src/summary.py",
+        "src/exporter.py",
         "src/retained_0.py"
       ]
     },
@@ -810,7 +855,7 @@
           "return_code": 1,
           "duration_seconds": 0.1410000000000764,
           "stdout": "",
-          "stderr": "E\n======================================================================\nERROR: test_json_export (unittest.loader._FailedTest.test_json_export)\n----------------------------------------------------------------------\nImportError: Failed to import test module: test_json_export\nTraceback (most recent call last):\n  File \"C:\\Users\\李世旺\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 382, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\李世旺\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 325, in _get_module_from_name\n    __import__(name)\n  File \"C:\\Users\\李世旺\\AppData\\Local\\Temp\\casr-graph-ablation-l_yfmkm8\\large\\missing_provenance\\tests\\test_json_export.py\", line 7, in <module>\n    from exporter import export_json, read_rows\nImportError: cannot import name 'export_json' from 'exporter' (C:\\Users\\李世旺\\AppData\\Local\\Temp\\casr-graph-ablation-l_yfmkm8\\large\\missing_provenance\\src\\exporter.py). Did you mean: 'export_xml'?\n\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nFAILED (errors=1)\n",
+          "stderr": "E\n======================================================================\nERROR: test_json_export (unittest.loader._FailedTest.test_json_export)\n----------------------------------------------------------------------\nImportError: Failed to import test module: test_json_export\nTraceback (most recent call last):\n  File \"<user-home>\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 382, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<user-home>\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 325, in _get_module_from_name\n    __import__(name)\n  File \"<workspace>\\tests\\test_json_export.py\", line 7, in <module>\n    from exporter import export_json, read_rows\nImportError: cannot import name 'export_json' from 'exporter' (<workspace>\\src\\exporter.py). Did you mean: 'export_xml'?\n\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nFAILED (errors=1)\n",
           "reason": "command exited non-zero"
         },
         {
@@ -819,7 +864,7 @@
           "return_code": 0,
           "duration_seconds": 0.15599999999994907,
           "stdout": "",
-          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.014s\n\nOK\n",
+          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.013s\n\nOK\n",
           "reason": "command exited successfully"
         }
       ]
@@ -899,6 +944,8 @@
             "path": "src/checksum.py",
             "baseline_blob": null,
             "current_blob": "aa229db300b483f8c1600d854f5f137f5ba6cf41",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -912,6 +959,8 @@
             "path": "src/cli.py",
             "baseline_blob": null,
             "current_blob": "c8ff4845818564ae2514fd279525c8e0a6c8aae3",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -925,6 +974,8 @@
             "path": "src/exporter.py",
             "baseline_blob": null,
             "current_blob": "6623e512fcfc7d108ecd53b086321d4a0876a9c1",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -938,6 +989,8 @@
             "path": "src/retained_0.py",
             "baseline_blob": null,
             "current_blob": "39045a6c7986a562fb62271b50531c1f52de5018",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -951,6 +1004,8 @@
             "path": "src/retained_1.py",
             "baseline_blob": null,
             "current_blob": "31ba3a2f0e57fd4b44f0d1bbcd1700a33a3dcca6",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -964,6 +1019,8 @@
             "path": "src/retained_2.py",
             "baseline_blob": null,
             "current_blob": "edf7ed7ad5d053e38c3b9224d3068a57e8ee63e7",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -977,6 +1034,8 @@
             "path": "src/retained_3.py",
             "baseline_blob": null,
             "current_blob": "ebef711bd6eeff37e59b29711d2ffe6f31a5d4b9",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -990,6 +1049,8 @@
             "path": "src/retained_4.py",
             "baseline_blob": null,
             "current_blob": "97089ca8dd4717903cdd1ae96a34a2aa205d4c70",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -1003,6 +1064,8 @@
             "path": "src/retained_5.py",
             "baseline_blob": null,
             "current_blob": "523150c76903d8c50e99337acf442fc0f13f29ad",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -1016,6 +1079,8 @@
             "path": "src/summary.py",
             "baseline_blob": null,
             "current_blob": "a617a54d8746d4b3c20f0d59d97149d3ca98be5a",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -1029,6 +1094,8 @@
             "path": "src/xml_helpers.py",
             "baseline_blob": null,
             "current_blob": "9ab17b21e6746a249058bf9520c87874777930b7",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -1042,6 +1109,8 @@
             "path": "tests/test_checksum.py",
             "baseline_blob": null,
             "current_blob": "cb7d5387166218f1c06c6300ea537d1b2ae76657",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -1055,6 +1124,8 @@
             "path": "tests/test_retained.py",
             "baseline_blob": null,
             "current_blob": "4f63d87d154288b3692fea04c2d295f0f738eae6",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -1068,6 +1139,8 @@
             "path": "tests/test_summary.py",
             "baseline_blob": null,
             "current_blob": "dda0317030c3e5be92adf24676b8c8fe4f3b8f7e",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -1141,7 +1214,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-json",
@@ -1149,7 +1223,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-retained",
@@ -1157,7 +1232,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-retained",
@@ -1165,7 +1241,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-retained",
@@ -1173,7 +1250,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-retained",
@@ -1181,7 +1259,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-retained",
@@ -1189,7 +1268,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-retained",
@@ -1197,7 +1277,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-summary",
@@ -1205,7 +1286,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-xml",
@@ -1213,7 +1295,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-xml",
@@ -1221,7 +1304,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "artifact:src/cli.py",
@@ -1229,7 +1313,8 @@
           "relation": "Depends-on",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "requirement:R-checksum:v1",
@@ -1237,7 +1322,8 @@
           "relation": "Motivates",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "requirement:R-json:v1",
@@ -1245,7 +1331,8 @@
           "relation": "Motivates",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "requirement:R-retained:v1",
@@ -1253,7 +1340,8 @@
           "relation": "Motivates",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "requirement:R-summary:v1",
@@ -1261,7 +1349,8 @@
           "relation": "Motivates",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         }
       ]
     }
@@ -1286,18 +1375,18 @@
     "retained_modules_rewritten": 0,
     "impact": {
       "seed_artifacts": [
-        "src/exporter.py",
-        "src/xml_helpers.py"
+        "src/xml_helpers.py",
+        "src/exporter.py"
       ],
       "active_supported_artifacts": [
-        "src/checksum.py",
         "src/retained_2.py",
+        "src/retained_3.py",
         "src/retained_1.py",
         "src/retained_5.py",
+        "src/checksum.py",
         "src/retained_4.py",
-        "src/retained_3.py",
-        "src/exporter.py",
         "src/summary.py",
+        "src/exporter.py",
         "src/retained_0.py"
       ],
       "exclusive_invalid_artifacts": [
@@ -1312,10 +1401,10 @@
       ],
       "unaffected_active_artifacts": [
         "src/retained_2.py",
+        "src/retained_3.py",
         "src/retained_1.py",
         "src/retained_5.py",
         "src/retained_4.py",
-        "src/retained_3.py",
         "src/summary.py",
         "src/retained_0.py"
       ]
@@ -1456,7 +1545,7 @@
           "return_code": 0,
           "duration_seconds": 0.1410000000000764,
           "stdout": "",
-          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.001s\n\nOK\n",
+          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n",
           "reason": "command exited successfully"
         },
         {
@@ -1465,7 +1554,7 @@
           "return_code": 0,
           "duration_seconds": 0.15599999999994907,
           "stdout": "",
-          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.014s\n\nOK\n",
+          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.013s\n\nOK\n",
           "reason": "command exited successfully"
         }
       ]
@@ -1545,6 +1634,8 @@
             "path": "src/checksum.py",
             "baseline_blob": null,
             "current_blob": "aa229db300b483f8c1600d854f5f137f5ba6cf41",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -1558,6 +1649,8 @@
             "path": "src/cli.py",
             "baseline_blob": null,
             "current_blob": "c8ff4845818564ae2514fd279525c8e0a6c8aae3",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -1571,6 +1664,8 @@
             "path": "src/exporter.py",
             "baseline_blob": null,
             "current_blob": "6623e512fcfc7d108ecd53b086321d4a0876a9c1",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -1584,6 +1679,8 @@
             "path": "src/retained_0.py",
             "baseline_blob": null,
             "current_blob": "39045a6c7986a562fb62271b50531c1f52de5018",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -1597,6 +1694,8 @@
             "path": "src/retained_1.py",
             "baseline_blob": null,
             "current_blob": "31ba3a2f0e57fd4b44f0d1bbcd1700a33a3dcca6",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -1610,6 +1709,8 @@
             "path": "src/retained_2.py",
             "baseline_blob": null,
             "current_blob": "edf7ed7ad5d053e38c3b9224d3068a57e8ee63e7",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -1623,6 +1724,8 @@
             "path": "src/retained_3.py",
             "baseline_blob": null,
             "current_blob": "ebef711bd6eeff37e59b29711d2ffe6f31a5d4b9",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -1636,6 +1739,8 @@
             "path": "src/retained_4.py",
             "baseline_blob": null,
             "current_blob": "97089ca8dd4717903cdd1ae96a34a2aa205d4c70",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -1649,6 +1754,8 @@
             "path": "src/retained_5.py",
             "baseline_blob": null,
             "current_blob": "523150c76903d8c50e99337acf442fc0f13f29ad",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -1662,6 +1769,8 @@
             "path": "src/summary.py",
             "baseline_blob": null,
             "current_blob": "a617a54d8746d4b3c20f0d59d97149d3ca98be5a",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -1675,6 +1784,8 @@
             "path": "src/xml_helpers.py",
             "baseline_blob": null,
             "current_blob": "9ab17b21e6746a249058bf9520c87874777930b7",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -1688,6 +1799,8 @@
             "path": "tests/test_checksum.py",
             "baseline_blob": null,
             "current_blob": "cb7d5387166218f1c06c6300ea537d1b2ae76657",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -1701,6 +1814,8 @@
             "path": "tests/test_retained.py",
             "baseline_blob": null,
             "current_blob": "4f63d87d154288b3692fea04c2d295f0f738eae6",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -1714,6 +1829,8 @@
             "path": "tests/test_summary.py",
             "baseline_blob": null,
             "current_blob": "dda0317030c3e5be92adf24676b8c8fe4f3b8f7e",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -1787,7 +1904,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-json",
@@ -1795,7 +1913,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-retained",
@@ -1803,7 +1922,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-retained",
@@ -1811,7 +1931,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-retained",
@@ -1819,7 +1940,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-retained",
@@ -1827,7 +1949,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-retained",
@@ -1835,7 +1958,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-retained",
@@ -1843,7 +1967,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-summary",
@@ -1851,7 +1976,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-xml",
@@ -1859,7 +1985,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-xml",
@@ -1867,7 +1994,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "artifact:src/checksum.py",
@@ -1875,7 +2003,8 @@
           "relation": "Depends-on",
           "relation_source": "test",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "artifact:src/cli.py",
@@ -1883,7 +2012,8 @@
           "relation": "Depends-on",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "requirement:R-checksum:v1",
@@ -1891,7 +2021,8 @@
           "relation": "Motivates",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "requirement:R-json:v1",
@@ -1899,7 +2030,8 @@
           "relation": "Motivates",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "requirement:R-retained:v1",
@@ -1907,7 +2039,8 @@
           "relation": "Motivates",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "requirement:R-summary:v1",
@@ -1915,7 +2048,8 @@
           "relation": "Motivates",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "requirement:R-xml:v1",
@@ -1923,7 +2057,8 @@
           "relation": "Motivates",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         }
       ]
     }
@@ -1948,16 +2083,16 @@
     "retained_modules_rewritten": 0,
     "impact": {
       "seed_artifacts": [
-        "src/exporter.py",
-        "src/xml_helpers.py"
+        "src/xml_helpers.py",
+        "src/exporter.py"
       ],
       "active_supported_artifacts": [
-        "src/checksum.py",
         "src/retained_2.py",
-        "src/retained_1.py",
         "src/retained_3.py",
-        "src/exporter.py",
+        "src/retained_1.py",
+        "src/checksum.py",
         "src/summary.py",
+        "src/exporter.py",
         "src/retained_0.py"
       ],
       "exclusive_invalid_artifacts": [
@@ -1970,10 +2105,10 @@
         "src/cli.py"
       ],
       "unaffected_active_artifacts": [
-        "src/checksum.py",
         "src/retained_2.py",
-        "src/retained_1.py",
         "src/retained_3.py",
+        "src/retained_1.py",
+        "src/checksum.py",
         "src/summary.py",
         "src/retained_0.py"
       ]
@@ -2090,16 +2225,16 @@
           "test_id": "active_json",
           "status": "PASS",
           "return_code": 0,
-          "duration_seconds": 0.13999999999987267,
+          "duration_seconds": 0.15599999999994907,
           "stdout": "",
-          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.001s\n\nOK\n",
+          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n",
           "reason": "command exited successfully"
         },
         {
           "test_id": "retention",
           "status": "PASS",
           "return_code": 0,
-          "duration_seconds": 0.17200000000002547,
+          "duration_seconds": 0.1410000000000764,
           "stdout": "",
           "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.009s\n\nOK\n",
           "reason": "command exited successfully"
@@ -2181,6 +2316,8 @@
             "path": "src/checksum.py",
             "baseline_blob": null,
             "current_blob": "aa229db300b483f8c1600d854f5f137f5ba6cf41",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -2194,6 +2331,8 @@
             "path": "src/cli.py",
             "baseline_blob": null,
             "current_blob": "c8ff4845818564ae2514fd279525c8e0a6c8aae3",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -2207,6 +2346,8 @@
             "path": "src/exporter.py",
             "baseline_blob": null,
             "current_blob": "6623e512fcfc7d108ecd53b086321d4a0876a9c1",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -2220,6 +2361,8 @@
             "path": "src/retained_0.py",
             "baseline_blob": null,
             "current_blob": "39045a6c7986a562fb62271b50531c1f52de5018",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -2233,6 +2376,8 @@
             "path": "src/retained_1.py",
             "baseline_blob": null,
             "current_blob": "31ba3a2f0e57fd4b44f0d1bbcd1700a33a3dcca6",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -2246,6 +2391,8 @@
             "path": "src/retained_2.py",
             "baseline_blob": null,
             "current_blob": "edf7ed7ad5d053e38c3b9224d3068a57e8ee63e7",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -2259,6 +2406,8 @@
             "path": "src/retained_3.py",
             "baseline_blob": null,
             "current_blob": "ebef711bd6eeff37e59b29711d2ffe6f31a5d4b9",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -2272,6 +2421,8 @@
             "path": "src/summary.py",
             "baseline_blob": null,
             "current_blob": "a617a54d8746d4b3c20f0d59d97149d3ca98be5a",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -2285,6 +2436,8 @@
             "path": "src/xml_helpers.py",
             "baseline_blob": null,
             "current_blob": "9ab17b21e6746a249058bf9520c87874777930b7",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -2298,6 +2451,8 @@
             "path": "tests/test_checksum.py",
             "baseline_blob": null,
             "current_blob": "cb7d5387166218f1c06c6300ea537d1b2ae76657",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -2311,6 +2466,8 @@
             "path": "tests/test_retained.py",
             "baseline_blob": null,
             "current_blob": "8e92a5e7a34cc082f19f2ebbecf8ddfe210c5181",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -2324,6 +2481,8 @@
             "path": "tests/test_summary.py",
             "baseline_blob": null,
             "current_blob": "dda0317030c3e5be92adf24676b8c8fe4f3b8f7e",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -2397,7 +2556,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-json",
@@ -2405,7 +2565,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-retained",
@@ -2413,7 +2574,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-retained",
@@ -2421,7 +2583,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-retained",
@@ -2429,7 +2592,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-retained",
@@ -2437,7 +2601,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-summary",
@@ -2445,7 +2610,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-xml",
@@ -2453,7 +2619,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-xml",
@@ -2461,7 +2628,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "artifact:src/cli.py",
@@ -2469,7 +2637,8 @@
           "relation": "Depends-on",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "requirement:R-checksum:v1",
@@ -2477,7 +2646,8 @@
           "relation": "Motivates",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "requirement:R-json:v1",
@@ -2485,7 +2655,8 @@
           "relation": "Motivates",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "requirement:R-retained:v1",
@@ -2493,7 +2664,8 @@
           "relation": "Motivates",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "requirement:R-summary:v1",
@@ -2501,7 +2673,8 @@
           "relation": "Motivates",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "requirement:R-xml:v1",
@@ -2509,7 +2682,8 @@
           "relation": "Motivates",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         }
       ]
     }
@@ -2532,24 +2706,24 @@
     "impact": {
       "seed_artifacts": [],
       "active_supported_artifacts": [
-        "src/checksum.py",
         "src/retained_2.py",
-        "src/retained_1.py",
         "src/retained_3.py",
-        "src/exporter.py",
+        "src/retained_1.py",
+        "src/checksum.py",
         "src/summary.py",
+        "src/exporter.py",
         "src/retained_0.py"
       ],
       "exclusive_invalid_artifacts": [],
       "shared_artifacts": [],
       "downstream_artifacts": [],
       "unaffected_active_artifacts": [
-        "src/checksum.py",
         "src/retained_2.py",
-        "src/retained_1.py",
         "src/retained_3.py",
-        "src/exporter.py",
+        "src/retained_1.py",
+        "src/checksum.py",
         "src/summary.py",
+        "src/exporter.py",
         "src/retained_0.py"
       ]
     },
@@ -2643,9 +2817,9 @@
           "test_id": "active_json",
           "status": "FAIL",
           "return_code": 1,
-          "duration_seconds": 0.1410000000000764,
+          "duration_seconds": 0.125,
           "stdout": "",
-          "stderr": "E\n======================================================================\nERROR: test_json_export (unittest.loader._FailedTest.test_json_export)\n----------------------------------------------------------------------\nImportError: Failed to import test module: test_json_export\nTraceback (most recent call last):\n  File \"C:\\Users\\李世旺\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 382, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\李世旺\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 325, in _get_module_from_name\n    __import__(name)\n  File \"C:\\Users\\李世旺\\AppData\\Local\\Temp\\casr-graph-ablation-l_yfmkm8\\medium\\missing_provenance\\tests\\test_json_export.py\", line 7, in <module>\n    from exporter import export_json, read_rows\nImportError: cannot import name 'export_json' from 'exporter' (C:\\Users\\李世旺\\AppData\\Local\\Temp\\casr-graph-ablation-l_yfmkm8\\medium\\missing_provenance\\src\\exporter.py). Did you mean: 'export_xml'?\n\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nFAILED (errors=1)\n",
+          "stderr": "E\n======================================================================\nERROR: test_json_export (unittest.loader._FailedTest.test_json_export)\n----------------------------------------------------------------------\nImportError: Failed to import test module: test_json_export\nTraceback (most recent call last):\n  File \"<user-home>\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 382, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<user-home>\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 325, in _get_module_from_name\n    __import__(name)\n  File \"<workspace>\\tests\\test_json_export.py\", line 7, in <module>\n    from exporter import export_json, read_rows\nImportError: cannot import name 'export_json' from 'exporter' (<workspace>\\src\\exporter.py). Did you mean: 'export_xml'?\n\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nFAILED (errors=1)\n",
           "reason": "command exited non-zero"
         },
         {
@@ -2734,6 +2908,8 @@
             "path": "src/checksum.py",
             "baseline_blob": null,
             "current_blob": "aa229db300b483f8c1600d854f5f137f5ba6cf41",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -2747,6 +2923,8 @@
             "path": "src/cli.py",
             "baseline_blob": null,
             "current_blob": "c8ff4845818564ae2514fd279525c8e0a6c8aae3",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -2760,6 +2938,8 @@
             "path": "src/exporter.py",
             "baseline_blob": null,
             "current_blob": "6623e512fcfc7d108ecd53b086321d4a0876a9c1",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -2773,6 +2953,8 @@
             "path": "src/retained_0.py",
             "baseline_blob": null,
             "current_blob": "39045a6c7986a562fb62271b50531c1f52de5018",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -2786,6 +2968,8 @@
             "path": "src/retained_1.py",
             "baseline_blob": null,
             "current_blob": "31ba3a2f0e57fd4b44f0d1bbcd1700a33a3dcca6",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -2799,6 +2983,8 @@
             "path": "src/retained_2.py",
             "baseline_blob": null,
             "current_blob": "edf7ed7ad5d053e38c3b9224d3068a57e8ee63e7",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -2812,6 +2998,8 @@
             "path": "src/retained_3.py",
             "baseline_blob": null,
             "current_blob": "ebef711bd6eeff37e59b29711d2ffe6f31a5d4b9",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -2825,6 +3013,8 @@
             "path": "src/summary.py",
             "baseline_blob": null,
             "current_blob": "a617a54d8746d4b3c20f0d59d97149d3ca98be5a",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -2838,6 +3028,8 @@
             "path": "src/xml_helpers.py",
             "baseline_blob": null,
             "current_blob": "9ab17b21e6746a249058bf9520c87874777930b7",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -2851,6 +3043,8 @@
             "path": "tests/test_checksum.py",
             "baseline_blob": null,
             "current_blob": "cb7d5387166218f1c06c6300ea537d1b2ae76657",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -2864,6 +3058,8 @@
             "path": "tests/test_retained.py",
             "baseline_blob": null,
             "current_blob": "8e92a5e7a34cc082f19f2ebbecf8ddfe210c5181",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -2877,6 +3073,8 @@
             "path": "tests/test_summary.py",
             "baseline_blob": null,
             "current_blob": "dda0317030c3e5be92adf24676b8c8fe4f3b8f7e",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -2950,7 +3148,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-json",
@@ -2958,7 +3157,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-retained",
@@ -2966,7 +3166,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-retained",
@@ -2974,7 +3175,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-retained",
@@ -2982,7 +3184,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-retained",
@@ -2990,7 +3193,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-summary",
@@ -2998,7 +3202,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-xml",
@@ -3006,7 +3211,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-xml",
@@ -3014,7 +3220,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "artifact:src/cli.py",
@@ -3022,7 +3229,8 @@
           "relation": "Depends-on",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "requirement:R-checksum:v1",
@@ -3030,7 +3238,8 @@
           "relation": "Motivates",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "requirement:R-json:v1",
@@ -3038,7 +3247,8 @@
           "relation": "Motivates",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "requirement:R-retained:v1",
@@ -3046,7 +3256,8 @@
           "relation": "Motivates",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "requirement:R-summary:v1",
@@ -3054,7 +3265,8 @@
           "relation": "Motivates",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         }
       ]
     }
@@ -3079,16 +3291,16 @@
     "retained_modules_rewritten": 0,
     "impact": {
       "seed_artifacts": [
-        "src/exporter.py",
-        "src/xml_helpers.py"
+        "src/xml_helpers.py",
+        "src/exporter.py"
       ],
       "active_supported_artifacts": [
-        "src/checksum.py",
         "src/retained_2.py",
-        "src/retained_1.py",
         "src/retained_3.py",
-        "src/exporter.py",
+        "src/retained_1.py",
+        "src/checksum.py",
         "src/summary.py",
+        "src/exporter.py",
         "src/retained_0.py"
       ],
       "exclusive_invalid_artifacts": [
@@ -3103,8 +3315,8 @@
       ],
       "unaffected_active_artifacts": [
         "src/retained_2.py",
-        "src/retained_1.py",
         "src/retained_3.py",
+        "src/retained_1.py",
         "src/summary.py",
         "src/retained_0.py"
       ]
@@ -3232,7 +3444,7 @@
           "return_code": 0,
           "duration_seconds": 0.15599999999994907,
           "stdout": "",
-          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.010s\n\nOK\n",
+          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.011s\n\nOK\n",
           "reason": "command exited successfully"
         }
       ]
@@ -3312,6 +3524,8 @@
             "path": "src/checksum.py",
             "baseline_blob": null,
             "current_blob": "aa229db300b483f8c1600d854f5f137f5ba6cf41",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -3325,6 +3539,8 @@
             "path": "src/cli.py",
             "baseline_blob": null,
             "current_blob": "c8ff4845818564ae2514fd279525c8e0a6c8aae3",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -3338,6 +3554,8 @@
             "path": "src/exporter.py",
             "baseline_blob": null,
             "current_blob": "6623e512fcfc7d108ecd53b086321d4a0876a9c1",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -3351,6 +3569,8 @@
             "path": "src/retained_0.py",
             "baseline_blob": null,
             "current_blob": "39045a6c7986a562fb62271b50531c1f52de5018",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -3364,6 +3584,8 @@
             "path": "src/retained_1.py",
             "baseline_blob": null,
             "current_blob": "31ba3a2f0e57fd4b44f0d1bbcd1700a33a3dcca6",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -3377,6 +3599,8 @@
             "path": "src/retained_2.py",
             "baseline_blob": null,
             "current_blob": "edf7ed7ad5d053e38c3b9224d3068a57e8ee63e7",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -3390,6 +3614,8 @@
             "path": "src/retained_3.py",
             "baseline_blob": null,
             "current_blob": "ebef711bd6eeff37e59b29711d2ffe6f31a5d4b9",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -3403,6 +3629,8 @@
             "path": "src/summary.py",
             "baseline_blob": null,
             "current_blob": "a617a54d8746d4b3c20f0d59d97149d3ca98be5a",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -3416,6 +3644,8 @@
             "path": "src/xml_helpers.py",
             "baseline_blob": null,
             "current_blob": "9ab17b21e6746a249058bf9520c87874777930b7",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -3429,6 +3659,8 @@
             "path": "tests/test_checksum.py",
             "baseline_blob": null,
             "current_blob": "cb7d5387166218f1c06c6300ea537d1b2ae76657",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -3442,6 +3674,8 @@
             "path": "tests/test_retained.py",
             "baseline_blob": null,
             "current_blob": "8e92a5e7a34cc082f19f2ebbecf8ddfe210c5181",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -3455,6 +3689,8 @@
             "path": "tests/test_summary.py",
             "baseline_blob": null,
             "current_blob": "dda0317030c3e5be92adf24676b8c8fe4f3b8f7e",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -3528,7 +3764,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-json",
@@ -3536,7 +3773,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-retained",
@@ -3544,7 +3782,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-retained",
@@ -3552,7 +3791,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-retained",
@@ -3560,7 +3800,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-retained",
@@ -3568,7 +3809,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-summary",
@@ -3576,7 +3818,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-xml",
@@ -3584,7 +3827,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-xml",
@@ -3592,7 +3836,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "artifact:src/checksum.py",
@@ -3600,7 +3845,8 @@
           "relation": "Depends-on",
           "relation_source": "test",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "artifact:src/cli.py",
@@ -3608,7 +3854,8 @@
           "relation": "Depends-on",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "requirement:R-checksum:v1",
@@ -3616,7 +3863,8 @@
           "relation": "Motivates",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "requirement:R-json:v1",
@@ -3624,7 +3872,8 @@
           "relation": "Motivates",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "requirement:R-retained:v1",
@@ -3632,7 +3881,8 @@
           "relation": "Motivates",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "requirement:R-summary:v1",
@@ -3640,7 +3890,8 @@
           "relation": "Motivates",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "requirement:R-xml:v1",
@@ -3648,7 +3899,8 @@
           "relation": "Motivates",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         }
       ]
     }
@@ -3673,14 +3925,14 @@
     "retained_modules_rewritten": 0,
     "impact": {
       "seed_artifacts": [
-        "src/exporter.py",
-        "src/xml_helpers.py"
+        "src/xml_helpers.py",
+        "src/exporter.py"
       ],
       "active_supported_artifacts": [
-        "src/checksum.py",
         "src/retained_1.py",
-        "src/exporter.py",
+        "src/checksum.py",
         "src/summary.py",
+        "src/exporter.py",
         "src/retained_0.py"
       ],
       "exclusive_invalid_artifacts": [
@@ -3693,10 +3945,10 @@
         "src/cli.py"
       ],
       "unaffected_active_artifacts": [
-        "src/checksum.py",
         "src/summary.py",
         "src/retained_0.py",
-        "src/retained_1.py"
+        "src/retained_1.py",
+        "src/checksum.py"
       ]
     },
     "repair_plan": {
@@ -3789,7 +4041,7 @@
           "test_id": "active_json",
           "status": "PASS",
           "return_code": 0,
-          "duration_seconds": 0.13999999999987267,
+          "duration_seconds": 0.125,
           "stdout": "",
           "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.001s\n\nOK\n",
           "reason": "command exited successfully"
@@ -3798,7 +4050,7 @@
           "test_id": "retention",
           "status": "PASS",
           "return_code": 0,
-          "duration_seconds": 0.1410000000000764,
+          "duration_seconds": 0.13999999999987267,
           "stdout": "",
           "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.005s\n\nOK\n",
           "reason": "command exited successfully"
@@ -3880,6 +4132,8 @@
             "path": "src/checksum.py",
             "baseline_blob": null,
             "current_blob": "aa229db300b483f8c1600d854f5f137f5ba6cf41",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -3893,6 +4147,8 @@
             "path": "src/cli.py",
             "baseline_blob": null,
             "current_blob": "c8ff4845818564ae2514fd279525c8e0a6c8aae3",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -3906,6 +4162,8 @@
             "path": "src/exporter.py",
             "baseline_blob": null,
             "current_blob": "6623e512fcfc7d108ecd53b086321d4a0876a9c1",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -3919,6 +4177,8 @@
             "path": "src/retained_0.py",
             "baseline_blob": null,
             "current_blob": "39045a6c7986a562fb62271b50531c1f52de5018",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -3932,6 +4192,8 @@
             "path": "src/retained_1.py",
             "baseline_blob": null,
             "current_blob": "31ba3a2f0e57fd4b44f0d1bbcd1700a33a3dcca6",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -3945,6 +4207,8 @@
             "path": "src/summary.py",
             "baseline_blob": null,
             "current_blob": "a617a54d8746d4b3c20f0d59d97149d3ca98be5a",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -3958,6 +4222,8 @@
             "path": "src/xml_helpers.py",
             "baseline_blob": null,
             "current_blob": "9ab17b21e6746a249058bf9520c87874777930b7",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -3971,6 +4237,8 @@
             "path": "tests/test_checksum.py",
             "baseline_blob": null,
             "current_blob": "cb7d5387166218f1c06c6300ea537d1b2ae76657",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -3984,6 +4252,8 @@
             "path": "tests/test_retained.py",
             "baseline_blob": null,
             "current_blob": "5f99debccaa99b533f377ddd1ca23365fae1921d",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -3997,6 +4267,8 @@
             "path": "tests/test_summary.py",
             "baseline_blob": null,
             "current_blob": "dda0317030c3e5be92adf24676b8c8fe4f3b8f7e",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -4070,7 +4342,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-json",
@@ -4078,7 +4351,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-retained",
@@ -4086,7 +4360,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-retained",
@@ -4094,7 +4369,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-summary",
@@ -4102,7 +4378,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-xml",
@@ -4110,7 +4387,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-xml",
@@ -4118,7 +4396,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "artifact:src/cli.py",
@@ -4126,7 +4405,8 @@
           "relation": "Depends-on",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "requirement:R-checksum:v1",
@@ -4134,7 +4414,8 @@
           "relation": "Motivates",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "requirement:R-json:v1",
@@ -4142,7 +4423,8 @@
           "relation": "Motivates",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "requirement:R-retained:v1",
@@ -4150,7 +4432,8 @@
           "relation": "Motivates",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "requirement:R-summary:v1",
@@ -4158,7 +4441,8 @@
           "relation": "Motivates",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "requirement:R-xml:v1",
@@ -4166,7 +4450,8 @@
           "relation": "Motivates",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         }
       ]
     }
@@ -4189,20 +4474,20 @@
     "impact": {
       "seed_artifacts": [],
       "active_supported_artifacts": [
-        "src/checksum.py",
         "src/retained_1.py",
-        "src/exporter.py",
+        "src/checksum.py",
         "src/summary.py",
+        "src/exporter.py",
         "src/retained_0.py"
       ],
       "exclusive_invalid_artifacts": [],
       "shared_artifacts": [],
       "downstream_artifacts": [],
       "unaffected_active_artifacts": [
-        "src/checksum.py",
         "src/retained_1.py",
-        "src/exporter.py",
+        "src/checksum.py",
         "src/summary.py",
+        "src/exporter.py",
         "src/retained_0.py"
       ]
     },
@@ -4276,16 +4561,16 @@
           "return_code": 1,
           "duration_seconds": 0.1410000000000764,
           "stdout": "",
-          "stderr": "E\n======================================================================\nERROR: test_json_export (unittest.loader._FailedTest.test_json_export)\n----------------------------------------------------------------------\nImportError: Failed to import test module: test_json_export\nTraceback (most recent call last):\n  File \"C:\\Users\\李世旺\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 382, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\李世旺\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 325, in _get_module_from_name\n    __import__(name)\n  File \"C:\\Users\\李世旺\\AppData\\Local\\Temp\\casr-graph-ablation-l_yfmkm8\\small\\missing_provenance\\tests\\test_json_export.py\", line 7, in <module>\n    from exporter import export_json, read_rows\nImportError: cannot import name 'export_json' from 'exporter' (C:\\Users\\李世旺\\AppData\\Local\\Temp\\casr-graph-ablation-l_yfmkm8\\small\\missing_provenance\\src\\exporter.py). Did you mean: 'export_xml'?\n\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nFAILED (errors=1)\n",
+          "stderr": "E\n======================================================================\nERROR: test_json_export (unittest.loader._FailedTest.test_json_export)\n----------------------------------------------------------------------\nImportError: Failed to import test module: test_json_export\nTraceback (most recent call last):\n  File \"<user-home>\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 382, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<user-home>\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 325, in _get_module_from_name\n    __import__(name)\n  File \"<workspace>\\tests\\test_json_export.py\", line 7, in <module>\n    from exporter import export_json, read_rows\nImportError: cannot import name 'export_json' from 'exporter' (<workspace>\\src\\exporter.py). Did you mean: 'export_xml'?\n\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nFAILED (errors=1)\n",
           "reason": "command exited non-zero"
         },
         {
           "test_id": "retention",
           "status": "PASS",
           "return_code": 0,
-          "duration_seconds": 0.17200000000002547,
+          "duration_seconds": 0.13999999999987267,
           "stdout": "",
-          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.005s\n\nOK\n",
+          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.004s\n\nOK\n",
           "reason": "command exited successfully"
         }
       ]
@@ -4365,6 +4650,8 @@
             "path": "src/checksum.py",
             "baseline_blob": null,
             "current_blob": "aa229db300b483f8c1600d854f5f137f5ba6cf41",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -4378,6 +4665,8 @@
             "path": "src/cli.py",
             "baseline_blob": null,
             "current_blob": "c8ff4845818564ae2514fd279525c8e0a6c8aae3",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -4391,6 +4680,8 @@
             "path": "src/exporter.py",
             "baseline_blob": null,
             "current_blob": "6623e512fcfc7d108ecd53b086321d4a0876a9c1",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -4404,6 +4695,8 @@
             "path": "src/retained_0.py",
             "baseline_blob": null,
             "current_blob": "39045a6c7986a562fb62271b50531c1f52de5018",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -4417,6 +4710,8 @@
             "path": "src/retained_1.py",
             "baseline_blob": null,
             "current_blob": "31ba3a2f0e57fd4b44f0d1bbcd1700a33a3dcca6",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -4430,6 +4725,8 @@
             "path": "src/summary.py",
             "baseline_blob": null,
             "current_blob": "a617a54d8746d4b3c20f0d59d97149d3ca98be5a",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -4443,6 +4740,8 @@
             "path": "src/xml_helpers.py",
             "baseline_blob": null,
             "current_blob": "9ab17b21e6746a249058bf9520c87874777930b7",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -4456,6 +4755,8 @@
             "path": "tests/test_checksum.py",
             "baseline_blob": null,
             "current_blob": "cb7d5387166218f1c06c6300ea537d1b2ae76657",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -4469,6 +4770,8 @@
             "path": "tests/test_retained.py",
             "baseline_blob": null,
             "current_blob": "5f99debccaa99b533f377ddd1ca23365fae1921d",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -4482,6 +4785,8 @@
             "path": "tests/test_summary.py",
             "baseline_blob": null,
             "current_blob": "dda0317030c3e5be92adf24676b8c8fe4f3b8f7e",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -4555,7 +4860,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-json",
@@ -4563,7 +4869,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-retained",
@@ -4571,7 +4878,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-retained",
@@ -4579,7 +4887,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-summary",
@@ -4587,7 +4896,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-xml",
@@ -4595,7 +4905,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-xml",
@@ -4603,7 +4914,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "artifact:src/cli.py",
@@ -4611,7 +4923,8 @@
           "relation": "Depends-on",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "requirement:R-checksum:v1",
@@ -4619,7 +4932,8 @@
           "relation": "Motivates",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "requirement:R-json:v1",
@@ -4627,7 +4941,8 @@
           "relation": "Motivates",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "requirement:R-retained:v1",
@@ -4635,7 +4950,8 @@
           "relation": "Motivates",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "requirement:R-summary:v1",
@@ -4643,7 +4959,8 @@
           "relation": "Motivates",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         }
       ]
     }
@@ -4668,14 +4985,14 @@
     "retained_modules_rewritten": 0,
     "impact": {
       "seed_artifacts": [
-        "src/exporter.py",
-        "src/xml_helpers.py"
+        "src/xml_helpers.py",
+        "src/exporter.py"
       ],
       "active_supported_artifacts": [
-        "src/checksum.py",
         "src/retained_1.py",
-        "src/exporter.py",
+        "src/checksum.py",
         "src/summary.py",
+        "src/exporter.py",
         "src/retained_0.py"
       ],
       "exclusive_invalid_artifacts": [
@@ -4786,14 +5103,14 @@
           "return_code": 0,
           "duration_seconds": 0.125,
           "stdout": "",
-          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.001s\n\nOK\n",
+          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n",
           "reason": "command exited successfully"
         },
         {
           "test_id": "retention",
           "status": "PASS",
           "return_code": 0,
-          "duration_seconds": 0.1570000000001528,
+          "duration_seconds": 0.15599999999994907,
           "stdout": "",
           "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.005s\n\nOK\n",
           "reason": "command exited successfully"
@@ -4875,6 +5192,8 @@
             "path": "src/checksum.py",
             "baseline_blob": null,
             "current_blob": "aa229db300b483f8c1600d854f5f137f5ba6cf41",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -4888,6 +5207,8 @@
             "path": "src/cli.py",
             "baseline_blob": null,
             "current_blob": "c8ff4845818564ae2514fd279525c8e0a6c8aae3",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -4901,6 +5222,8 @@
             "path": "src/exporter.py",
             "baseline_blob": null,
             "current_blob": "6623e512fcfc7d108ecd53b086321d4a0876a9c1",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -4914,6 +5237,8 @@
             "path": "src/retained_0.py",
             "baseline_blob": null,
             "current_blob": "39045a6c7986a562fb62271b50531c1f52de5018",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -4927,6 +5252,8 @@
             "path": "src/retained_1.py",
             "baseline_blob": null,
             "current_blob": "31ba3a2f0e57fd4b44f0d1bbcd1700a33a3dcca6",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -4940,6 +5267,8 @@
             "path": "src/summary.py",
             "baseline_blob": null,
             "current_blob": "a617a54d8746d4b3c20f0d59d97149d3ca98be5a",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -4953,6 +5282,8 @@
             "path": "src/xml_helpers.py",
             "baseline_blob": null,
             "current_blob": "9ab17b21e6746a249058bf9520c87874777930b7",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -4966,6 +5297,8 @@
             "path": "tests/test_checksum.py",
             "baseline_blob": null,
             "current_blob": "cb7d5387166218f1c06c6300ea537d1b2ae76657",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -4979,6 +5312,8 @@
             "path": "tests/test_retained.py",
             "baseline_blob": null,
             "current_blob": "5f99debccaa99b533f377ddd1ca23365fae1921d",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -4992,6 +5327,8 @@
             "path": "tests/test_summary.py",
             "baseline_blob": null,
             "current_blob": "dda0317030c3e5be92adf24676b8c8fe4f3b8f7e",
+            "baseline_mode": null,
+            "current_mode": "100644",
             "produced_by": [],
             "dependencies": [],
             "evidence_ids": []
@@ -5065,7 +5402,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-json",
@@ -5073,7 +5411,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-retained",
@@ -5081,7 +5420,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-retained",
@@ -5089,7 +5429,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-summary",
@@ -5097,7 +5438,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-xml",
@@ -5105,7 +5447,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "action:A-xml",
@@ -5113,7 +5456,8 @@
           "relation": "Produces",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "artifact:src/checksum.py",
@@ -5121,7 +5465,8 @@
           "relation": "Depends-on",
           "relation_source": "test",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "artifact:src/cli.py",
@@ -5129,7 +5474,8 @@
           "relation": "Depends-on",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "requirement:R-checksum:v1",
@@ -5137,7 +5483,8 @@
           "relation": "Motivates",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "requirement:R-json:v1",
@@ -5145,7 +5492,8 @@
           "relation": "Motivates",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "requirement:R-retained:v1",
@@ -5153,7 +5501,8 @@
           "relation": "Motivates",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "requirement:R-summary:v1",
@@ -5161,7 +5510,8 @@
           "relation": "Motivates",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         },
         {
           "source": "requirement:R-xml:v1",
@@ -5169,7 +5519,8 @@
           "relation": "Motivates",
           "relation_source": "manual",
           "confidence": 1.0,
-          "human_verified": true
+          "human_verified": true,
+          "impact_eligible": true
         }
       ]
     }

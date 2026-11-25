@@ -21,16 +21,16 @@
           "test_id": "active_json",
           "status": "PASS",
           "return_code": 0,
-          "duration_seconds": 0.1410000000000764,
+          "duration_seconds": 0.15599999999994907,
           "stdout": "",
-          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n",
+          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.001s\n\nOK\n",
           "reason": "command exited successfully"
         },
         {
           "test_id": "retention",
           "status": "PASS",
           "return_code": 0,
-          "duration_seconds": 0.17099999999982174,
+          "duration_seconds": 0.15599999999994907,
           "stdout": "",
           "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.013s\n\nOK\n",
           "reason": "command exited successfully"
@@ -46,10 +46,12 @@
     "active_requirement": "PASS",
     "retention": "PASS",
     "repair_success": true,
-    "total_paths_written": 14,
+    "total_paths_written": 16,
     "paths_deleted": 0,
     "retained_modules_rewritten": 6,
     "written_paths": [
+      "README.md",
+      "data/input.csv",
       "src/checksum.py",
       "src/cli.py",
       "src/exporter.py",
@@ -74,7 +76,7 @@
           "return_code": 0,
           "duration_seconds": 0.125,
           "stdout": "",
-          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.001s\n\nOK\n",
+          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n",
           "reason": "command exited successfully"
         },
         {
@@ -83,7 +85,7 @@
           "return_code": 0,
           "duration_seconds": 0.17200000000002547,
           "stdout": "",
-          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.021s\n\nOK\n",
+          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.020s\n\nOK\n",
           "reason": "command exited successfully"
         }
       ]
@@ -110,23 +112,23 @@
           "test_id": "active_json",
           "status": "FAIL",
           "return_code": 1,
-          "duration_seconds": 0.1410000000000764,
+          "duration_seconds": 0.15599999999994907,
           "stdout": "",
-          "stderr": "E\n======================================================================\nERROR: test_json_export (unittest.loader._FailedTest.test_json_export)\n----------------------------------------------------------------------\nImportError: Failed to import test module: test_json_export\nTraceback (most recent call last):\n  File \"C:\\Users\\李世旺\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 382, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\李世旺\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 325, in _get_module_from_name\n    __import__(name)\n  File \"C:\\Users\\李世旺\\AppData\\Local\\Temp\\casr-mvp-experiment-3ogtn5c_\\large\\no_repair\\tests\\test_json_export.py\", line 7, in <module>\n    from exporter import export_json, read_rows\nImportError: cannot import name 'export_json' from 'exporter' (C:\\Users\\李世旺\\AppData\\Local\\Temp\\casr-mvp-experiment-3ogtn5c_\\large\\no_repair\\src\\exporter.py). Did you mean: 'export_xml'?\n\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nFAILED (errors=1)\n",
+          "stderr": "E\n======================================================================\nERROR: test_json_export (unittest.loader._FailedTest.test_json_export)\n----------------------------------------------------------------------\nImportError: Failed to import test module: test_json_export\nTraceback (most recent call last):\n  File \"<user-home>\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 382, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<user-home>\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 325, in _get_module_from_name\n    __import__(name)\n  File \"<workspace>\\tests\\test_json_export.py\", line 7, in <module>\n    from exporter import export_json, read_rows\nImportError: cannot import name 'export_json' from 'exporter' (<workspace>\\src\\exporter.py). Did you mean: 'export_xml'?\n\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nFAILED (errors=1)\n",
           "reason": "command exited non-zero"
         },
         {
           "test_id": "retention",
           "status": "PASS",
           "return_code": 0,
-          "duration_seconds": 0.17099999999982174,
+          "duration_seconds": 0.17200000000002547,
           "stdout": "",
-          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.021s\n\nOK\n",
+          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.019s\n\nOK\n",
           "reason": "command exited successfully"
         }
       ]
     },
-    "duration_seconds": 0.31199999999989814,
+    "duration_seconds": 0.32799999999997453,
     "retained_modules": 6
   },
   {
@@ -151,7 +153,7 @@
           "test_id": "active_json",
           "status": "PASS",
           "return_code": 0,
-          "duration_seconds": 0.1410000000000764,
+          "duration_seconds": 0.125,
           "stdout": "",
           "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n",
           "reason": "command exited successfully"
@@ -162,12 +164,12 @@
           "return_code": 0,
           "duration_seconds": 0.15599999999994907,
           "stdout": "",
-          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.010s\n\nOK\n",
+          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.009s\n\nOK\n",
           "reason": "command exited successfully"
         }
       ]
     },
-    "duration_seconds": 0.29700000000002547,
+    "duration_seconds": 0.28099999999994907,
     "retained_modules": 4
   },
   {
@@ -176,10 +178,12 @@
     "active_requirement": "PASS",
     "retention": "PASS",
     "repair_success": true,
-    "total_paths_written": 12,
+    "total_paths_written": 14,
     "paths_deleted": 0,
     "retained_modules_rewritten": 4,
     "written_paths": [
+      "README.md",
+      "data/input.csv",
       "src/checksum.py",
       "src/cli.py",
       "src/exporter.py",
@@ -200,7 +204,7 @@
           "test_id": "active_json",
           "status": "PASS",
           "return_code": 0,
-          "duration_seconds": 0.1410000000000764,
+          "duration_seconds": 0.11000000000012733,
           "stdout": "",
           "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n",
           "reason": "command exited successfully"
@@ -211,12 +215,12 @@
           "return_code": 0,
           "duration_seconds": 0.15599999999994907,
           "stdout": "",
-          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.015s\n\nOK\n",
+          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.014s\n\nOK\n",
           "reason": "command exited successfully"
         }
       ]
     },
-    "duration_seconds": 0.29700000000002547,
+    "duration_seconds": 0.2660000000000764,
     "retained_modules": 4
   },
   {
@@ -238,16 +242,16 @@
           "test_id": "active_json",
           "status": "FAIL",
           "return_code": 1,
-          "duration_seconds": 0.13999999999987267,
+          "duration_seconds": 0.125,
           "stdout": "",
-          "stderr": "E\n======================================================================\nERROR: test_json_export (unittest.loader._FailedTest.test_json_export)\n----------------------------------------------------------------------\nImportError: Failed to import test module: test_json_export\nTraceback (most recent call last):\n  File \"C:\\Users\\李世旺\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 382, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\李世旺\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 325, in _get_module_from_name\n    __import__(name)\n  File \"C:\\Users\\李世旺\\AppData\\Local\\Temp\\casr-mvp-experiment-3ogtn5c_\\medium\\no_repair\\tests\\test_json_export.py\", line 7, in <module>\n    from exporter import export_json, read_rows\nImportError: cannot import name 'export_json' from 'exporter' (C:\\Users\\李世旺\\AppData\\Local\\Temp\\casr-mvp-experiment-3ogtn5c_\\medium\\no_repair\\src\\exporter.py). Did you mean: 'export_xml'?\n\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nFAILED (errors=1)\n",
+          "stderr": "E\n======================================================================\nERROR: test_json_export (unittest.loader._FailedTest.test_json_export)\n----------------------------------------------------------------------\nImportError: Failed to import test module: test_json_export\nTraceback (most recent call last):\n  File \"<user-home>\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 382, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<user-home>\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 325, in _get_module_from_name\n    __import__(name)\n  File \"<workspace>\\tests\\test_json_export.py\", line 7, in <module>\n    from exporter import export_json, read_rows\nImportError: cannot import name 'export_json' from 'exporter' (<workspace>\\src\\exporter.py). Did you mean: 'export_xml'?\n\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nFAILED (errors=1)\n",
           "reason": "command exited non-zero"
         },
         {
           "test_id": "retention",
           "status": "PASS",
           "return_code": 0,
-          "duration_seconds": 0.1570000000001528,
+          "duration_seconds": 0.17200000000002547,
           "stdout": "",
           "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.014s\n\nOK\n",
           "reason": "command exited successfully"
@@ -281,21 +285,21 @@
           "return_code": 0,
           "duration_seconds": 0.1410000000000764,
           "stdout": "",
-          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n",
+          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.001s\n\nOK\n",
           "reason": "command exited successfully"
         },
         {
           "test_id": "retention",
           "status": "PASS",
           "return_code": 0,
-          "duration_seconds": 0.15599999999994907,
+          "duration_seconds": 0.13999999999987267,
           "stdout": "",
-          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.005s\n\nOK\n",
+          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.006s\n\nOK\n",
           "reason": "command exited successfully"
         }
       ]
     },
-    "duration_seconds": 0.29700000000002547,
+    "duration_seconds": 0.28099999999994907,
     "retained_modules": 2
   },
   {
@@ -304,10 +308,12 @@
     "active_requirement": "PASS",
     "retention": "PASS",
     "repair_success": true,
-    "total_paths_written": 10,
+    "total_paths_written": 12,
     "paths_deleted": 0,
     "retained_modules_rewritten": 2,
     "written_paths": [
+      "README.md",
+      "data/input.csv",
       "src/checksum.py",
       "src/cli.py",
       "src/exporter.py",
@@ -326,7 +332,7 @@
           "test_id": "active_json",
           "status": "PASS",
           "return_code": 0,
-          "duration_seconds": 0.13999999999987267,
+          "duration_seconds": 0.125,
           "stdout": "",
           "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n",
           "reason": "command exited successfully"
@@ -337,12 +343,12 @@
           "return_code": 0,
           "duration_seconds": 0.15599999999994907,
           "stdout": "",
-          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.007s\n\nOK\n",
+          "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.008s\n\nOK\n",
           "reason": "command exited successfully"
         }
       ]
     },
-    "duration_seconds": 0.29599999999982174,
+    "duration_seconds": 0.28099999999994907,
     "retained_modules": 2
   },
   {
@@ -366,21 +372,21 @@
           "return_code": 1,
           "duration_seconds": 0.1410000000000764,
           "stdout": "",
-          "stderr": "E\n======================================================================\nERROR: test_json_export (unittest.loader._FailedTest.test_json_export)\n----------------------------------------------------------------------\nImportError: Failed to import test module: test_json_export\nTraceback (most recent call last):\n  File \"C:\\Users\\李世旺\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 382, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\李世旺\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 325, in _get_module_from_name\n    __import__(name)\n  File \"C:\\Users\\李世旺\\AppData\\Local\\Temp\\casr-mvp-experiment-3ogtn5c_\\small\\no_repair\\tests\\test_json_export.py\", line 7, in <module>\n    from exporter import export_json, read_rows\nImportError: cannot import name 'export_json' from 'exporter' (C:\\Users\\李世旺\\AppData\\Local\\Temp\\casr-mvp-experiment-3ogtn5c_\\small\\no_repair\\src\\exporter.py). Did you mean: 'export_xml'?\n\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nFAILED (errors=1)\n",
+          "stderr": "E\n======================================================================\nERROR: test_json_export (unittest.loader._FailedTest.test_json_export)\n----------------------------------------------------------------------\nImportError: Failed to import test module: test_json_export\nTraceback (most recent call last):\n  File \"<user-home>\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 382, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<user-home>\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 325, in _get_module_from_name\n    __import__(name)\n  File \"<workspace>\\tests\\test_json_export.py\", line 7, in <module>\n    from exporter import export_json, read_rows\nImportError: cannot import name 'export_json' from 'exporter' (<workspace>\\src\\exporter.py). Did you mean: 'export_xml'?\n\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nFAILED (errors=1)\n",
           "reason": "command exited non-zero"
         },
         {
           "test_id": "retention",
           "status": "PASS",
           "return_code": 0,
-          "duration_seconds": 0.17200000000002547,
+          "duration_seconds": 0.15599999999994907,
           "stdout": "",
           "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.007s\n\nOK\n",
           "reason": "command exited successfully"
         }
       ]
     },
-    "duration_seconds": 0.31300000000010186,
+    "duration_seconds": 0.29700000000002547,
     "retained_modules": 2
   }
 ]

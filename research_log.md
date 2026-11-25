@@ -63,4 +63,5 @@
 - 三个案例共享同一模板，仅改变保留模块数量；单次运行，无统计显著性检验。
 - 未调用 DeepSeek 或其他模型 API；未运行 SWE-Interact 真实 Benchmark；未测真实 Agent 的图误差分布。
 - 集群早期 CPU-only smoke 已通过；本轮 M2 复验尝试时旧 Jupyter 页面报错，尚无最新 M2 的 Linux 远程结果。
-- 独立审查、初始提交与 GitHub 开源在本日志追加时尚未完成。
+- 独立审查已完成一次；Critical/Important 集中修复后完整套件为 82 passed、3 skipped。
+- 最终 Demo 与两套实验已在干净代码提交 `0bf2a02` 上重跑，元数据 `working_tree_dirty=false`；敏感环境标识与验证器路径已脱敏。

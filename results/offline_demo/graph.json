@@ -73,6 +73,8 @@
         "path": "src/checksum.py",
         "baseline_blob": null,
         "current_blob": "bd0e6348fd38650d63ef0d0a48a02238a46916ab",
+        "baseline_mode": null,
+        "current_mode": "100644",
         "produced_by": [],
         "dependencies": [],
         "evidence_ids": []
@@ -86,6 +88,8 @@
         "path": "src/cli.py",
         "baseline_blob": null,
         "current_blob": "7600d0ed42f422b29e77df14f4c5a1d56ad1f515",
+        "baseline_mode": null,
+        "current_mode": "100644",
         "produced_by": [],
         "dependencies": [],
         "evidence_ids": []
@@ -99,6 +103,8 @@
         "path": "src/exporter.py",
         "baseline_blob": null,
         "current_blob": "275a8935530b0360ca624d7055f1cf938b7a838e",
+        "baseline_mode": null,
+        "current_mode": "100644",
         "produced_by": [],
         "dependencies": [],
         "evidence_ids": []
@@ -112,6 +118,8 @@
         "path": "src/summary.py",
         "baseline_blob": null,
         "current_blob": "fd08e8cb625c42b5bb2ee5329523633c17c0e13b",
+        "baseline_mode": null,
+        "current_mode": "100644",
         "produced_by": [],
         "dependencies": [],
         "evidence_ids": []
@@ -125,6 +133,8 @@
         "path": "src/xml_helpers.py",
         "baseline_blob": null,
         "current_blob": "4fedf4aa5f01d40159a341a0f7f4812543be0c11",
+        "baseline_mode": null,
+        "current_mode": "100644",
         "produced_by": [],
         "dependencies": [],
         "evidence_ids": []
@@ -138,6 +148,8 @@
         "path": "tests/test_checksum.py",
         "baseline_blob": null,
         "current_blob": "b2b81f73f98f692fed35f934f4e9605bf649888b",
+        "baseline_mode": null,
+        "current_mode": "100644",
         "produced_by": [],
         "dependencies": [],
         "evidence_ids": []
@@ -151,6 +163,8 @@
         "path": "tests/test_summary.py",
         "baseline_blob": null,
         "current_blob": "ac07f3a24a571def5658a121aed12d9742c53898",
+        "baseline_mode": null,
+        "current_mode": "100644",
         "produced_by": [],
         "dependencies": [],
         "evidence_ids": []
@@ -164,6 +178,8 @@
         "path": "tests/test_xml_export.py",
         "baseline_blob": null,
         "current_blob": "fa917b1b234a2feb52e08264057ac283e652468f",
+        "baseline_mode": null,
+        "current_mode": "100644",
         "produced_by": [],
         "dependencies": [],
         "evidence_ids": []
@@ -225,7 +241,8 @@
       "relation": "Produces",
       "relation_source": "manual",
       "confidence": 1.0,
-      "human_verified": true
+      "human_verified": true,
+      "impact_eligible": true
     },
     {
       "source": "action:A-export",
@@ -233,7 +250,8 @@
       "relation": "Produces",
       "relation_source": "manual",
       "confidence": 1.0,
-      "human_verified": true
+      "human_verified": true,
+      "impact_eligible": true
     },
     {
       "source": "action:A-export",
@@ -241,7 +259,8 @@
       "relation": "Produces",
       "relation_source": "manual",
       "confidence": 1.0,
-      "human_verified": true
+      "human_verified": true,
+      "impact_eligible": true
     },
     {
       "source": "action:A-export",
@@ -249,7 +268,8 @@
       "relation": "Produces",
       "relation_source": "manual",
       "confidence": 1.0,
-      "human_verified": true
+      "human_verified": true,
+      "impact_eligible": true
     },
     {
       "source": "action:A-json",
@@ -257,7 +277,8 @@
       "relation": "Produces",
       "relation_source": "manual",
       "confidence": 1.0,
-      "human_verified": true
+      "human_verified": true,
+      "impact_eligible": true
     },
     {
       "source": "action:A-summary",
@@ -265,7 +286,8 @@
       "relation": "Produces",
       "relation_source": "manual",
       "confidence": 1.0,
-      "human_verified": true
+      "human_verified": true,
+      "impact_eligible": true
     },
     {
       "source": "artifact:src/cli.py",
@@ -273,7 +295,8 @@
       "relation": "Depends-on",
       "relation_source": "manual",
       "confidence": 1.0,
-      "human_verified": true
+      "human_verified": true,
+      "impact_eligible": true
     },
     {
       "source": "requirement:R-checksum:v1",
@@ -281,7 +304,8 @@
       "relation": "Motivates",
       "relation_source": "manual",
       "confidence": 1.0,
-      "human_verified": true
+      "human_verified": true,
+      "impact_eligible": true
     },
     {
       "source": "requirement:R-json:v1",
@@ -289,7 +313,8 @@
       "relation": "Motivates",
       "relation_source": "manual",
       "confidence": 1.0,
-      "human_verified": true
+      "human_verified": true,
+      "impact_eligible": true
     },
     {
       "source": "requirement:R-summary:v1",
@@ -297,7 +322,8 @@
       "relation": "Motivates",
       "relation_source": "manual",
       "confidence": 1.0,
-      "human_verified": true
+      "human_verified": true,
+      "impact_eligible": true
     },
     {
       "source": "requirement:R-xml:v1",
@@ -305,7 +331,8 @@
       "relation": "Motivates",
       "relation_source": "manual",
       "confidence": 1.0,
-      "human_verified": true
+      "human_verified": true,
+      "impact_eligible": true
     }
   ]
 }
