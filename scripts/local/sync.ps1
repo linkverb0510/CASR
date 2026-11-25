@@ -1,6 +1,6 @@
 param(
     [string]$HostAlias = "casr-cluster",
-    [string]$RemoteRoot = "/home/panxg27/CASR",
+    [string]$RemoteRoot = "$env:CASR_REMOTE_ROOT",
     [int]$ConnectTimeoutSeconds = 10,
     [switch]$DryRun
 )

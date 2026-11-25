@@ -30,6 +30,7 @@ def run_powershell(script: Path, *args: str) -> subprocess.CompletedProcess[str]
             *args,
         ],
         cwd=ROOT,
+        env={**os.environ, "CASR_REMOTE_ROOT": "/home/casr/CASR"},
         capture_output=True,
         text=True,
         encoding="utf-8",
@@ -67,7 +68,7 @@ def test_sync_dry_run_reports_plan_without_creating_archive() -> None:
 
     assert plan["action"] == "sync"
     assert plan["host_alias"] == "casr-cluster"
-    assert plan["remote_root"] == "/home/panxg27/CASR"
+    assert plan["remote_root"] == "/home/casr/CASR"
     assert "scp" in plan["steps"]
     assert "scripts/cluster/prepare.sh" in plan["archive_items"]
     assert "examples" in plan["archive_items"]

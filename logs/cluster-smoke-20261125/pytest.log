@@ -18,9 +18,9 @@ tests/test_cluster_scripts.py:17: in run_powershell
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
 self = <Popen: returncode: 255 args: ['powershell.exe', '-NoProfile', '-ExecutionPo...>
-args = ['powershell.exe', '-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', '/home/panxg27/CASR/scripts/local/sync.ps1', ...]
+args = ['powershell.exe', '-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', '/home/cluster-user/CASR/scripts/local/sync.ps1', ...]
 executable = b'powershell.exe', preexec_fn = None, close_fds = True
-pass_fds = (), cwd = PosixPath('/home/panxg27/CASR'), env = None
+pass_fds = (), cwd = PosixPath('/home/cluster-user/CASR'), env = None
 startupinfo = None, creationflags = 0, shell = False, p2cread = -1
 p2cwrite = -1, c2pread = 11, c2pwrite = 12, errread = 13, errwrite = 14
 restore_signals = True, gid = None, gids = None, uid = None, umask = -1
@@ -215,9 +215,9 @@ tests/test_cluster_scripts.py:17: in run_powershell
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
 self = <Popen: returncode: 255 args: ['powershell.exe', '-NoProfile', '-ExecutionPo...>
-args = ['powershell.exe', '-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', '/home/panxg27/CASR/scripts/local/sync.ps1', ...]
+args = ['powershell.exe', '-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', '/home/cluster-user/CASR/scripts/local/sync.ps1', ...]
 executable = b'powershell.exe', preexec_fn = None, close_fds = True
-pass_fds = (), cwd = PosixPath('/home/panxg27/CASR'), env = None
+pass_fds = (), cwd = PosixPath('/home/cluster-user/CASR'), env = None
 startupinfo = None, creationflags = 0, shell = False, p2cread = -1
 p2cwrite = -1, c2pread = 11, c2pwrite = 12, errread = 13, errwrite = 14
 restore_signals = True, gid = None, gids = None, uid = None, umask = -1
@@ -412,9 +412,9 @@ tests/test_cluster_scripts.py:17: in run_powershell
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
 self = <Popen: returncode: 255 args: ['powershell.exe', '-NoProfile', '-ExecutionPo...>
-args = ['powershell.exe', '-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', '/home/panxg27/CASR/scripts/local/sync.ps1', ...]
+args = ['powershell.exe', '-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', '/home/cluster-user/CASR/scripts/local/sync.ps1', ...]
 executable = b'powershell.exe', preexec_fn = None, close_fds = True
-pass_fds = (), cwd = PosixPath('/home/panxg27/CASR'), env = None
+pass_fds = (), cwd = PosixPath('/home/cluster-user/CASR'), env = None
 startupinfo = None, creationflags = 0, shell = False, p2cread = -1
 p2cwrite = -1, c2pread = 11, c2pwrite = 12, errread = 13, errwrite = 14
 restore_signals = True, gid = None, gids = None, uid = None, umask = -1
@@ -609,9 +609,9 @@ tests/test_cluster_scripts.py:17: in run_powershell
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
 self = <Popen: returncode: 255 args: ['powershell.exe', '-NoProfile', '-ExecutionPo...>
-args = ['powershell.exe', '-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', '/home/panxg27/CASR/scripts/local/sync.ps1', ...]
+args = ['powershell.exe', '-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', '/home/cluster-user/CASR/scripts/local/sync.ps1', ...]
 executable = b'powershell.exe', preexec_fn = None, close_fds = True
-pass_fds = (), cwd = PosixPath('/home/panxg27/CASR'), env = None
+pass_fds = (), cwd = PosixPath('/home/cluster-user/CASR'), env = None
 startupinfo = None, creationflags = 0, shell = False, p2cread = -1
 p2cwrite = -1, c2pread = 11, c2pwrite = 12, errread = 13, errwrite = 14
 restore_signals = True, gid = None, gids = None, uid = None, umask = -1
@@ -803,9 +803,9 @@ tests/test_cluster_scripts.py:17: in run_powershell
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
 self = <Popen: returncode: 255 args: ['powershell.exe', '-NoProfile', '-ExecutionPo...>
-args = ['powershell.exe', '-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', '/home/panxg27/CASR/scripts/local/sync.ps1', ...]
+args = ['powershell.exe', '-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', '/home/cluster-user/CASR/scripts/local/sync.ps1', ...]
 executable = b'powershell.exe', preexec_fn = None, close_fds = True
-pass_fds = (), cwd = PosixPath('/home/panxg27/CASR'), env = None
+pass_fds = (), cwd = PosixPath('/home/cluster-user/CASR'), env = None
 startupinfo = None, creationflags = 0, shell = False, p2cread = -1
 p2cwrite = -1, c2pread = 11, c2pwrite = 12, errread = 13, errwrite = 14
 restore_signals = True, gid = None, gids = None, uid = None, umask = -1
@@ -997,9 +997,9 @@ tests/test_cluster_scripts.py:17: in run_powershell
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
 self = <Popen: returncode: 255 args: ['powershell.exe', '-NoProfile', '-ExecutionPo...>
-args = ['powershell.exe', '-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', '/home/panxg27/CASR/scripts/local/smoke-test.ps1', ...]
+args = ['powershell.exe', '-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', '/home/cluster-user/CASR/scripts/local/smoke-test.ps1', ...]
 executable = b'powershell.exe', preexec_fn = None, close_fds = True
-pass_fds = (), cwd = PosixPath('/home/panxg27/CASR'), env = None
+pass_fds = (), cwd = PosixPath('/home/cluster-user/CASR'), env = None
 startupinfo = None, creationflags = 0, shell = False, p2cread = -1
 p2cwrite = -1, c2pread = 11, c2pwrite = 12, errread = 13, errwrite = 14
 restore_signals = True, gid = None, gids = None, uid = None, umask = -1
@@ -1175,7 +1175,7 @@ E                   FileNotFoundError: [Errno 2] No such file or directory: 'pow
 /usr/lib/python3.12/subprocess.py:1955: FileNotFoundError
 _________________ test_collect_dry_run_does_not_create_output __________________
 
-tmp_path = PosixPath('/tmp/pytest-of-panxg27/pytest-1/test_collect_dry_run_does_not_0')
+tmp_path = PosixPath('/tmp/pytest-of-cluster-user/pytest-1/test_collect_dry_run_does_not_0')
 
     def test_collect_dry_run_does_not_create_output(tmp_path: Path) -> None:
         output = tmp_path / "collected"
@@ -1200,9 +1200,9 @@ tests/test_cluster_scripts.py:17: in run_powershell
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
 self = <Popen: returncode: 255 args: ['powershell.exe', '-NoProfile', '-ExecutionPo...>
-args = ['powershell.exe', '-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', '/home/panxg27/CASR/scripts/local/collect.ps1', ...]
+args = ['powershell.exe', '-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', '/home/cluster-user/CASR/scripts/local/collect.ps1', ...]
 executable = b'powershell.exe', preexec_fn = None, close_fds = True
-pass_fds = (), cwd = PosixPath('/home/panxg27/CASR'), env = None
+pass_fds = (), cwd = PosixPath('/home/cluster-user/CASR'), env = None
 startupinfo = None, creationflags = 0, shell = False, p2cread = -1
 p2cwrite = -1, c2pread = 11, c2pwrite = 12, errread = 13, errwrite = 14
 restore_signals = True, gid = None, gids = None, uid = None, umask = -1
@@ -1394,9 +1394,9 @@ tests/test_cluster_scripts.py:17: in run_powershell
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
 self = <Popen: returncode: 255 args: ['powershell.exe', '-NoProfile', '-ExecutionPo...>
-args = ['powershell.exe', '-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', '/home/panxg27/CASR/scripts/local/collect.ps1', ...]
+args = ['powershell.exe', '-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', '/home/cluster-user/CASR/scripts/local/collect.ps1', ...]
 executable = b'powershell.exe', preexec_fn = None, close_fds = True
-pass_fds = (), cwd = PosixPath('/home/panxg27/CASR'), env = None
+pass_fds = (), cwd = PosixPath('/home/cluster-user/CASR'), env = None
 startupinfo = None, creationflags = 0, shell = False, p2cread = -1
 p2cwrite = -1, c2pread = 11, c2pwrite = 12, errread = 13, errwrite = 14
 restore_signals = True, gid = None, gids = None, uid = None, umask = -1

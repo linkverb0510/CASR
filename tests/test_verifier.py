@@ -48,6 +48,23 @@ def test_verifier_missing_command_timeout_and_empty_specs_are_unknown(tmp_path: 
     assert IndependentVerifier().run(tmp_path, []).overall == "UNKNOWN"
 
 
+def test_verifier_redacts_home_and_workspace_paths(tmp_path: Path) -> None:
+    report = IndependentVerifier().run(
+        tmp_path,
+        [
+            spec(
+                "paths",
+                "from pathlib import Path; print(Path.home()); print(Path.cwd())",
+            )
+        ],
+    )
+    output = report.results[0].stdout
+    assert str(Path.home()) not in output
+    assert str(tmp_path) not in output
+    assert "<user-home>" in output
+    assert "<workspace>" in output
+
+
 def test_verifier_fail_dominates_unknown_and_output_is_truncated(tmp_path: Path) -> None:
     failing = spec("fail", "import sys; print('x' * 9000); sys.exit(1)")
     unknown = TestSpec(

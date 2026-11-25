@@ -133,6 +133,69 @@ def test_add_correction_does_not_invalidate_existing_artifacts() -> None:
     assert analysis.unaffected_active_artifacts == {"xml_helper", "exporter", "checksum"}
 
 
+def test_add_does_not_reseed_previously_revoked_requirements() -> None:
+    graph = build_graph()
+    ledger = RequirementLedger()
+    ledger.add_requirement("R-old", "Export XML", NOW)
+    ledger.add_requirement("R-keep", "Keep checksum", NOW)
+    ledger.apply_correction(
+        Correction(
+            correction_id="C-revoke",
+            correction_type="REVOKE",
+            target_requirement_id="R-old",
+            created_at=NOW,
+        )
+    )
+    correction = Correction(
+        correction_id="C-add",
+        correction_type="ADD",
+        new_requirement_id="R-extra",
+        content="Extra output",
+        created_at=NOW,
+    )
+    ledger.apply_correction(correction)
+
+    analysis = analyze_impact(graph, ledger, correction)
+
+    assert analysis.seed_artifacts == set()
+    assert analysis.exclusive_invalid_artifacts == set()
+
+
+def test_amend_only_marks_historical_version_artifacts_as_invalid() -> None:
+    graph = ProvenanceGraph()
+    add_requirement(graph, "R-old")
+    graph.add_requirement_version(
+        RequirementVersion(
+            requirement_id="R-old",
+            version=2,
+            content="Export JSON",
+            status="Active",
+            created_at=NOW,
+        )
+    )
+    add_action(graph, "A-old")
+    add_artifact(graph, "exporter")
+    graph.add_relation("requirement:R-old:v1", "action:A-old", "Motivates", "manual", 1.0, True)
+    graph.add_relation("action:A-old", "artifact:exporter", "Produces", "git", 1.0, False)
+    ledger = RequirementLedger()
+    ledger.add_requirement("R-old", "Export XML", NOW)
+    correction = Correction(
+        correction_id="C-amend",
+        correction_type="AMEND",
+        target_requirement_id="R-old",
+        content="Export JSON",
+        created_at=NOW,
+    )
+    ledger.apply_correction(correction)
+
+    analysis = analyze_impact(graph, ledger, correction)
+
+    assert analysis.seed_artifacts == {"exporter"}
+    assert analysis.active_supported_artifacts == set()
+    assert analysis.exclusive_invalid_artifacts == {"exporter"}
+    assert analysis.shared_artifacts == set()
+
+
 def test_new_artifact_reverts_and_missing_metadata_revalidates() -> None:
     graph = ProvenanceGraph()
     add_requirement(graph, "R-old")

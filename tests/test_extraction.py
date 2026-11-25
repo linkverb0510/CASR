@@ -56,6 +56,10 @@ def test_extracts_added_modified_deleted_and_renamed_artifacts(tmp_path: Path) -
     assert by_path["src/removed.py"].current_blob is None
     assert by_path["src/new_name.py"].baseline_blob is not None
     assert by_path["src/new_name.py"].current_blob is not None
+    assert by_path["src/new.py"].baseline_mode is None
+    assert by_path["src/new.py"].current_mode == "100644"
+    assert by_path["src/shared.py"].baseline_mode == "100644"
+    assert by_path["src/shared.py"].current_mode == "100644"
 
 
 def test_invalid_revision_and_empty_diff(tmp_path: Path) -> None:

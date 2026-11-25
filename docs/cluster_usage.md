@@ -9,7 +9,7 @@
 ## 1. 前置条件
 
 1. EasyConnect 已登录且 Crater 网页可达。若系统级 VPN 适配器仍 Disconnected，不要据此判定网页或 Jupyter ingress 不可用；需分别验证。
-2. Crater 平台已登录当前账号 `panxg27`。
+2. Crater 平台已登录当前账号 `<cluster-user>`。
 3. 已创建一个运行中的 Jupyter Lab 开发作业；如仅做代码同步和 CPU 测试，应选择页面允许的最小 CPU/内存，GPU 数量设为 0。
 4. 开发作业保留平台要求的 `sleep infinity` 启动方式。
 5. 从作业详情页的“SSH 连接”取得**该作业实际提供的 IP、端口和用户名**。
@@ -19,12 +19,12 @@
 
 ## 2. 配置 SSH 别名
 
-只有在取得实际运行中作业的连接信息后，才编辑 `C:\Users\李世旺\.ssh\config`。以下为模板，不是当前已验证配置：
+只有在取得实际运行中作业的连接信息后，才编辑 `C:\Users\<local-user>\.ssh\config`。以下为模板，不是当前已验证配置：
 
 ```sshconfig
 Host casr-cluster
     HostName <作业详情页提供的实际 IP 或主机名>
-    User panxg27
+    User <cluster-user>
     Port <作业详情页提供的实际端口>
     IdentityFile ~/.ssh/<已确认使用的现有私钥>
     IdentitiesOnly yes
@@ -34,7 +34,7 @@ Host casr-cluster
 
 注意：
 
-- `panxg27` 已从作业配置核实；IP 和端口必须来自当前运行中作业，不能使用 PDF 中其他用户的示例。
+- `<cluster-user>` 已从作业配置核实；IP 和端口必须来自当前运行中作业，不能使用 PDF 中其他用户的示例。
 - 首次连接前应通过官方渠道核对主机密钥指纹，再决定是否加入 `known_hosts`。
 - 不要覆盖现有 `os-lab` 配置。
 - 如果注册公钥，只上传 `.pub` 内容，不上传私钥。
@@ -53,7 +53,7 @@ ssh casr-cluster "printf 'connected\n'; hostname; pwd"
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/local/sync.ps1
 ```
 
-默认目标为已核实的 Jupyter 持久目录 `/home/panxg27/CASR`。如果开发作业使用其他挂载路径：
+远程根目录通过 `CASR_REMOTE_ROOT` 环境变量或 `-RemoteRoot` 显式提供，不把用户路径写入公开仓库。例如：
 
 ```powershell
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/local/sync.ps1 -RemoteRoot <实际绝对路径>
@@ -92,10 +92,10 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/local/smoke-test
 如果 SSH 尚未配置，但已有运行中的 Jupyter 开发作业，可在官方 Jupyter Lab Terminal 中执行同一入口：
 
 ```bash
-cd /home/panxg27/CASR
+cd /home/<cluster-user>/CASR
 bash scripts/cluster/run_experiment.sh \
   --run-id casr-smoke-001 \
-  --root /home/panxg27/CASR
+  --root /home/<cluster-user>/CASR
 ```
 
 远程测试文件包含 Windows PowerShell 测试时，Linux 作业应使用已经平台跳过的测试快照；本次远程快照较早，实际通过 `PYTEST_ADDOPTS` 排除 Windows 专属测试后通过。
@@ -141,13 +141,13 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/local/smoke-test
 cd <实际挂载的 CASR 绝对路径> && bash scripts/cluster/run_experiment.sh --root <实际挂载的 CASR 绝对路径> --run-id casr-smoke-001
 ```
 
-例如，只有当页面确实把共享目录挂载到 `/home/panxg27` 时，才使用：
+例如，只有当页面确实把共享目录挂载到 `/home/<cluster-user>` 时，才使用：
 
 ```bash
-cd /home/panxg27/CASR && bash scripts/cluster/run_experiment.sh --root /home/panxg27/CASR --run-id casr-smoke-001
+cd /home/<cluster-user>/CASR && bash scripts/cluster/run_experiment.sh --root /home/<cluster-user>/CASR --run-id casr-smoke-001
 ```
 
-如果自定义作业挂载到 `/mnt/...`，必须使用 `/mnt/...`，不能沿用 Jupyter 的 `/home/panxg27`。
+如果自定义作业挂载到 `/mnt/...`，必须使用 `/mnt/...`，不能沿用 Jupyter 的 `/home/<cluster-user>`。
 
 ### 5.3 实验脚本行为
 

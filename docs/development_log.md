@@ -85,7 +85,7 @@
 - 离线 Demo：PASS；决策为 Revert 2、Modify 1、Revalidate 1、Retain 2；JSON/checksum/summary 三组测试全 PASS。
 - 问题：临时 Git 仓库句柄导致 Windows 清理失败；显式关闭 Repo 后修复。fixture 的 checksum 测试曾错误假设顺序无关，已改为真实的稳定性断言。
 - 合成实验：3 案例 × 3 策略，共 9 次；不修复 0/3 成功，整体重建 3/3，CASR 3/3。
-- 关键结果：整体重建平均写 12 个路径、重写 12 个保留模块；CASR 平均写 2 个路径、重写 0 个保留模块。
+- 关键结果：整体重建平均写 14 个路径、重写 12 个保留模块；CASR 平均写 2 个路径、重写 0 个保留模块。
 - 边界：这是 synthetic harness policy experiment，不是自主 Agent Benchmark；单次运行，不能宣称统计显著或方法普遍优越。
 - 产物：`results/offline_demo/`、`results/mvp_experiment/`（本地 ignored，报告中保留摘要与复现命令）。
 - 集群同步白名单已加入 `examples` 与 `experiments`，确保远程可运行 Demo 和实验。
@@ -98,4 +98,15 @@
 - 修复：ADD 更正不再调用 `ledger.get(None)`；现有 Active 产物保持不受影响。
 - Ruling：把本轮小型实验的原始结果、配置、清单和元数据加入 Git 白名单 — 用户要求完整保存复现材料 — 成本：仓库增加约 220 KiB 文本证据。
 - 集群：早期 1 CPU/2 GiB/0 GPU smoke 已真实通过；本轮 M2 复验尝试时旧 Jupyter 作业已停止，页面显示 `Something went wrong!`，随后访问平台首页连接超时，未伪造远程 M2 结果。
-- 独立审查：已启动 fresh-context 只读审查；发现将在本日志记录并修复。
+- 独立审查：已完成一次 fresh-context 只读审查，不重复审查。
+
+### 2026-11-26 — 独立审查集中修复
+
+- 审查发现：快照可能跟随符号链接并复制秘密文件；Revert 未恢复 Git mode/type；artifact 路径可能被当作 patch glob；溯源 JSON 类型校验不足；ADD/AMEND 存在跨版本误播种；整体重建漏计基线文件写入；实验措辞外推过强。
+- TDD 红灯：首轮 10 failed、33 passed、3 skipped；集中修复后 5 failed、40 passed、3 skipped，剩余为 Git mode 类型和 provenance 校验顺序。
+- 补充红灯：伪造 `impact_eligible=true` 的未核验 LLM 边可绕过 JSON 校验；新增回归测试确认 DID NOT RAISE 后修复。
+- 修复：快照保留 symlink 且排除 `.env`/密钥；拒绝 glob 路径；恢复 blob、文件类型和可执行 mode；严格校验 provenance 节点、边来源、bool 与 impact 派生值；ADD 不重新播种历史失效需求；AMEND 只处理目标版本；非 Active 需求不可再次转移；Git mode 的 `0` 映射为 None。
+- 验证：`uv run pytest -q --tb=short -o addopts=''` → **82 passed、3 skipped in 53.18s**；日志保存在 `logs/review-fix-20261126/pytest.log`。
+- Ruling（deferred minor）：unittest 发现 0 个测试时仍可能判 PASS；当前 TestSpec 由受信配置生成，空 argv 集合已判 UNKNOWN，故本轮不扩大验证器接口，留待真实 Benchmark 验证器契约阶段处理；成本：错误配置的 unittest 命令可能产生假 PASS。
+- 公开前脱敏：账号、用户名、内网地址、作业标识、公钥指纹和本机用户路径替换为占位符，保留连接机制与真实执行结论。
+- 补充 TDD：验证器原始失败输出会泄露本机用户目录；新增路径脱敏测试观察红灯后，在输出边界将工作区与用户目录替换为 `<workspace>` / `<user-home>`，保留错误类型与相对路径。

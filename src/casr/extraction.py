@@ -8,6 +8,10 @@ from git.exc import BadName, BadObject
 from casr.models import Artifact
 
 
+def _git_mode(value: int | None) -> str | None:
+    return None if not value else f"{value:o}"
+
+
 def normalize_repo_path(path: str) -> str:
     candidate = PurePosixPath(path)
     if (
@@ -42,6 +46,8 @@ def extract_git_changes(
                 path=path,
                 baseline_blob=baseline_blob,
                 current_blob=current_blob,
+                baseline_mode=_git_mode(change.a_mode),
+                current_mode=_git_mode(change.b_mode),
             )
     finally:
         repo.close()

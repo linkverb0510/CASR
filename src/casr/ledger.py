@@ -47,6 +47,8 @@ class RequirementLedger:
             raise ValueError("correction target requirement does not exist")
         record = self._records[target_id]
         current = record.current
+        if current.status != "Active":
+            raise ValueError("correction target must be active")
 
         if correction.correction_type == "AMEND":
             if not correction.content:

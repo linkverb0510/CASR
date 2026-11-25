@@ -9,7 +9,7 @@
 1. 只读核查 Windows 网络、路由、DNS、代理监听与 VPN 适配器状态。
 2. 核查 OpenSSH、SCP、Git、Windows PowerShell 和已有 SSH 公钥指纹。
 3. 登录态下核查 Crater 当前账号的交互式作业、自定义作业和历史 Jupyter 作业配置。
-4. 从实际作业配置核实账号 `panxg27`、工作目录 `/home/panxg27` 和共享持久卷挂载。
+4. 从实际作业配置核实账号 `<cluster-user>`、工作目录 `/home/<cluster-user>` 和共享持久卷挂载。
 5. 编写五个半自动脚本及平台无关的脚本测试。
 6. 在本地真实运行 `prepare.sh` 和 `run_experiment.sh`，不是仅做 dry-run。
 7. 创建一个 1 CPU、2 GiB、0 GPU 的 Jupyter 开发作业并确认进入 Running。
@@ -27,9 +27,9 @@
 
 | 项目 | 实测结果 |
 |---|---|
-| WLAN | `10.135.146.27/16`，ifIndex 14 |
-| 默认路由 | 唯一 `0.0.0.0/0`，WLAN，下一跳 `10.135.0.1` |
-| 集群网段路由 | 未发现 `192.168.5.0/24` 专用路由 |
+| WLAN | `<local-ip>/16`，ifIndex 14 |
+| 默认路由 | 唯一 `0.0.0.0/0`，WLAN，下一跳 `<gateway>` |
+| 集群网段路由 | 未发现 `<cluster-subnet>` 专用路由 |
 | Sangfor VPN 适配器 | Disconnected |
 | `gpu.act.buaa.edu.cn` | 解析到 `198.18.0.74` |
 | WinHTTP | 直连 |
@@ -48,8 +48,8 @@
 | EasyConnect 网页登录 | 已登录，浏览器可访问 Crater |
 | Sangfor SSL VPN 适配器 | 仍为 Disconnected |
 | McAfee VPN / QMTAP / UU TAP | 均为 Disconnected |
-| 默认路由 | 仍只有 WLAN，下一跳 `10.135.0.1` |
-| `192.168.5.0/24` 专用路由 | 未发现 |
+| 默认路由 | 仍只有 WLAN，下一跳 `<gateway>` |
+| `<cluster-subnet>` 专用路由 | 未发现 |
 | 集群域名 DNS | 仍为 `198.18.0.74` |
 | 本机 `192.168.5.*` 地址 | 未发现 |
 | 实际访问路径 | 浏览器、本地代理/PAC 和平台 ingress 可用 |
@@ -61,7 +61,7 @@
 | 项目 | 实测值 |
 |---|---|
 | 显示名 | `casr-dev-smoke-20261125` |
-| 作业名 | `jpt-panxg27-261125-ee9ee` |
+| 作业名 | `jpt-<redacted-job-id>` |
 | 命名空间 | `crater-workspace` |
 | 创建时间 | `2026-11-25T14:11:23Z` |
 | 调度器 | `volcano` |
@@ -70,11 +70,11 @@
 | 内存 | request `2Gi`，limit `2049Mi` |
 | GPU | 0 |
 | 镜像 | `gpu-harbor.act.buaa.edu.cn/user-zhangyf/linuxserver/code-server:07182240-cf6d` |
-| 工作目录 | `/home/panxg27` |
+| 工作目录 | `/home/<cluster-user>` |
 | 持久卷 | `crater-rw-storage` |
-| 子路径 | `sugon-gpu-home-lab/panxg27` |
-| 官方 SSH | `ssh panxg27@192.168.5.95 -p 31258` |
-| 官方 Jupyter | `https://gpu.act.buaa.edu.cn/ingress/jupyter/jpt-panxg27-261125-ee9ee` |
+| 子路径 | `sugon-gpu-home-lab/<cluster-user>` |
+| 官方 SSH | `ssh <cluster-user>@<job-ip> -p <job-port>` |
+| 官方 Jupyter | `https://gpu.act.buaa.edu.cn/ingress/jupyter/jpt-<redacted-job-id>` |
 | 最终状态 | 已停止；页面显示完成于约 22:44（UTC+08:00） |
 
 平台最初返回 `40302 Email not verified`。仅将本作业的邮件通知开关关闭后重新提交成功，没有修改账户验证设置或绕过认证。
@@ -93,7 +93,7 @@
 
 - 使用现有登录会话访问官方 Jupyter ingress。
 - 通过同源 REST 创建 Terminal，并通过 Terminal WebSocket 执行命令。
-- 确认 Pod 主机名、`/home/panxg27` 工作目录和默认 Python 3.13.9。
+- 确认 Pod 主机名、`/home/<cluster-user>` 工作目录和默认 Python 3.13.9。
 - 未读取浏览器 Cookie、访问令牌或密码。
 
 ## 5. 同步与依赖准备
@@ -101,13 +101,13 @@
 同步包：
 
 - 本地文件：`logs/casr-sync-20261125.tar.gz`
-- 远程文件：`/home/panxg27/casr-sync-20261125.tar.gz`
+- 远程文件：`/home/<cluster-user>/casr-sync-20261125.tar.gz`
 - 大小：16,948 字节
 - SHA-256：`3b346cf6f632fa0a016b13bd96bedd0858be6998a7eee7196a4c3d01b352da18`
 - 归档条目：27；解包后常规文件：20
 - 排除：`.env`、`.venv`、缓存、原始数据、日志和结果
 
-远程校验后解包到 `/home/panxg27/CASR`。显式执行 `prepare.sh --install`，退出码为 0，在 Python 3.12.3 虚拟环境中安装锁定依赖。
+远程校验后解包到 `/home/<cluster-user>/CASR`。显式执行 `prepare.sh --install`，退出码为 0，在 Python 3.12.3 虚拟环境中安装锁定依赖。
 
 发现并修复本地 `prepare.sh` 的 Python 选择问题：默认 `python3` 为 3.13.9 时，应优先选择已有的 `python3.12`。远程同步包产生于该修复之前，但远程 `.venv` 已创建并优先使用，因此两次 smoke 均使用 Python 3.12.3。
 
@@ -133,11 +133,11 @@
 远程快照尚未包含本地平台跳过补丁，因此通过 `PYTEST_ADDOPTS` 排除 Windows 专属测试，保留环境测试和 Linux Bash 脚本测试。
 
 ```bash
-cd /home/panxg27/CASR
+cd /home/<cluster-user>/CASR
 PYTEST_ADDOPTS='-k "not sync and not smoke_test and not collect and not prepare_prefers"' \
   bash scripts/cluster/run_experiment.sh \
     --run-id cluster-smoke-linux-20261125 \
-    --root /home/panxg27/CASR
+    --root /home/<cluster-user>/CASR
 ```
 
 | 项目 | 结果 |
@@ -151,7 +151,7 @@ PYTEST_ADDOPTS='-k "not sync and not smoke_test and not collect and not prepare_
 | environment 退出码 | 0 |
 | 状态 | PASS |
 | GPU 可见性 | unavailable，符合 0 GPU 作业配置 |
-| 主机 | `jpt-panxg27-261125-ee9ee-default0-0` |
+| 主机 | `jpt-<redacted-job-id>-default0-0` |
 
 这次运行验证的是集群 Pod 内的离线环境、Linux 脚本和产物落盘，不是模型实验或 Benchmark 性能。
 

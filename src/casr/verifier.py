@@ -51,6 +51,17 @@ def _text(value: str | bytes | None) -> str:
     return value
 
 
+def _redact(value: str | bytes | None, workspace: Path) -> str:
+    text = _text(value)
+    workspace_text = str(workspace.resolve())
+    return (
+        text.replace(workspace_text, "<workspace>")
+        .replace(str(workspace), "<workspace>")
+        .replace(str(Path.home().resolve()), "<user-home>")
+        .replace(str(Path.home()), "<user-home>")[:8000]
+    )
+
+
 class IndependentVerifier:
     def run(self, workspace: Path, specs: list[TestSpec]) -> VerificationReport:
         results: list[TestResult] = []
@@ -73,8 +84,8 @@ class IndependentVerifier:
                         status="UNKNOWN",
                         return_code=None,
                         duration_seconds=time.monotonic() - started,
-                        stdout=_text(exc.stdout)[:8000],
-                        stderr=_text(exc.stderr)[:8000],
+                        stdout=_redact(exc.stdout, workspace),
+                        stderr=_redact(exc.stderr, workspace),
                         reason="test command timed out",
                     )
                 )
@@ -87,7 +98,7 @@ class IndependentVerifier:
                         duration_seconds=time.monotonic() - started,
                         stdout="",
                         stderr="",
-                        reason=f"test command could not start: {exc}",
+                        reason=f"test command could not start: {_redact(str(exc), workspace)}",
                     )
                 )
             else:
@@ -98,8 +109,8 @@ class IndependentVerifier:
                         status=status,
                         return_code=completed.returncode,
                         duration_seconds=time.monotonic() - started,
-                        stdout=completed.stdout[:8000],
-                        stderr=completed.stderr[:8000],
+                        stdout=_redact(completed.stdout, workspace),
+                        stderr=_redact(completed.stderr, workspace),
                         reason="command exited successfully" if status == "PASS" else "command exited non-zero",
                     )
                 )

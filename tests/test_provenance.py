@@ -116,6 +116,40 @@ def test_all_relation_directions_and_json_round_trip() -> None:
     assert restored.impact_edges() == graph.impact_edges()
 
 
+def test_from_dict_rejects_non_boolean_human_verified() -> None:
+    graph = ProvenanceGraph()
+    graph.add_action(action())
+    graph.add_artifact(artifact("F1"))
+    graph.add_relation("action:A1", "artifact:F1", "Produces", "llm", 0.99, False)
+    payload = json.loads(json.dumps(graph.to_dict()))
+    payload["edges"][0]["human_verified"] = "false"
+
+    with pytest.raises(ValueError, match="human_verified"):
+        ProvenanceGraph.from_dict(payload)
+
+
+def test_from_dict_rejects_tampered_impact_eligibility() -> None:
+    graph = ProvenanceGraph()
+    graph.add_action(action())
+    graph.add_artifact(artifact("F1"))
+    graph.add_relation("action:A1", "artifact:F1", "Produces", "llm", 0.99, False)
+    payload = json.loads(json.dumps(graph.to_dict()))
+    payload["edges"][0]["impact_eligible"] = True
+
+    with pytest.raises(ValueError, match="impact_eligible"):
+        ProvenanceGraph.from_dict(payload)
+
+
+def test_from_dict_validates_node_schema_and_identity() -> None:
+    graph = ProvenanceGraph()
+    graph.add_action(action())
+    payload = json.loads(json.dumps(graph.to_dict()))
+    payload["nodes"][0]["data"]["action_type"] = 123
+
+    with pytest.raises(ValueError):
+        ProvenanceGraph.from_dict(payload)
+
+
 def test_unverified_llm_edges_are_preserved_but_not_impact_eligible() -> None:
     graph = ProvenanceGraph()
     graph.add_action(action())

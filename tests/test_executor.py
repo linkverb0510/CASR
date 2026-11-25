@@ -136,6 +136,89 @@ def test_executor_rejects_symlink_escape(tmp_path: Path) -> None:
     assert outside.read_text(encoding="utf-8") == "unchanged\n"
 
 
+def test_snapshot_preserves_symlinks_and_excludes_secrets(tmp_path: Path) -> None:
+    workspace, _, graph = make_workspace(tmp_path)
+    (workspace / ".env").write_text("SECRET=not-for-snapshot\n", encoding="utf-8")
+    outside = tmp_path / "outside.txt"
+    outside.write_text("outside\n", encoding="utf-8")
+    try:
+        os.symlink(outside, workspace / "link.txt", target_is_directory=False)
+    except OSError as exc:
+        pytest.skip(f"symlinks unavailable: {exc}")
+    plan = RepairPlan(correction_id="C1")
+
+    RepairExecutor(workspace, graph).execute(plan, {}, tmp_path / "snapshot")
+
+    snapshot = tmp_path / "snapshot" / "workspace"
+    assert not (snapshot / ".env").exists()
+    assert (snapshot / "link.txt").is_symlink()
+    assert (snapshot / "link.txt").readlink() == outside
+
+
+def test_executor_rejects_glob_artifact_paths(tmp_path: Path) -> None:
+    workspace, _, graph = make_workspace(tmp_path)
+    graph.add_artifact(
+        Artifact.model_construct(
+            artifact_id="glob",
+            path="*.py",
+            baseline_blob=None,
+            current_blob="blob",
+            produced_by=[],
+            dependencies=[],
+            evidence_ids=[],
+        )
+    )
+    patch = (
+        b"diff --git a/shared.py b/shared.py\n"
+        b"--- a/shared.py\n"
+        b"+++ b/shared.py\n"
+        b"@@ -1 +1 @@\n"
+        b"-agent shared\n"
+        b"+repaired shared\n"
+    )
+    plan = RepairPlan(
+        correction_id="C1",
+        decisions=[RepairDecision(kind="Modify", artifact_id="glob", reason="test")],
+    )
+
+    records = RepairExecutor(workspace, graph).execute(
+        plan, {"glob": patch}, tmp_path / "snapshot"
+    )
+
+    assert records[0].status == "failed"
+    assert (workspace / "shared.py").read_text(encoding="utf-8") == "agent shared\n"
+
+
+def test_executor_restores_executable_mode(tmp_path: Path) -> None:
+    if os.name == "nt":
+        pytest.skip("POSIX executable mode")
+    workspace, repo, graph = make_workspace(tmp_path)
+    path = workspace / "modified.py"
+    path.chmod(0o755)
+    repo.index.add(["modified.py"])
+    repo.index.commit("executable")
+    baseline = repo.head.commit.tree["modified.py"]
+    graph.add_artifact(
+        Artifact(
+            artifact_id="executable",
+            path="modified.py",
+            baseline_blob=baseline.hexsha,
+            baseline_mode="100755",
+        )
+    )
+    path.write_text("changed\n", encoding="utf-8")
+    path.chmod(0o644)
+    plan = RepairPlan(
+        correction_id="C1",
+        decisions=[RepairDecision(kind="Revert", artifact_id="executable", reason="test")],
+    )
+
+    records = RepairExecutor(workspace, graph).execute(plan, {}, tmp_path / "snapshot")
+
+    assert records[0].status == "applied"
+    assert path.stat().st_mode & 0o111
+
+
 def test_executor_rejects_unknown_decision_and_internal_snapshot(tmp_path: Path) -> None:
     workspace, _, graph = make_workspace(tmp_path)
     plan = RepairPlan(

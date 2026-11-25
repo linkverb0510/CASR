@@ -52,6 +52,7 @@ def test_mvp_synthetic_experiment(tmp_path: Path) -> None:
     assert summary["casr_repair_success_rate"] == 1.0
     assert summary["full_rebuild_repair_success_rate"] == 1.0
     assert "整体重建重写 12 个保留模块" in summary["finding"]
+    assert summary["policies"]["full_rebuild"]["mean_total_paths_written"] == 14.0
     assert " and " not in summary["finding"]
     with (output_dir / "results.csv").open(encoding="utf-8", newline="") as handle:
         assert len(list(csv.DictReader(handle))) == 9

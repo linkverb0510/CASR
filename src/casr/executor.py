@@ -42,6 +42,7 @@ class RepairExecutor:
             or posix_path.is_absolute()
             or any(part in {"", ".", ".."} for part in relative.split("/"))
             or posix_path.as_posix() != relative
+            or any(character in relative for character in "*?[")
         ):
             raise ValueError(f"unsafe artifact path: {relative!r}")
         target = (self.workspace / relative).resolve()
@@ -57,23 +58,34 @@ class RepairExecutor:
         shutil.copytree(
             self.workspace,
             snapshot_root / "workspace",
-            ignore=shutil.ignore_patterns(".git"),
+            symlinks=True,
+            ignore=shutil.ignore_patterns(".git", ".env", ".env.*", "*.key", "*.pem"),
         )
         head = self.repo.head.commit
         baseline = head.parents[0].hexsha if head.parents else head.hexsha
         diff = self.repo.git.diff(baseline, "--binary")
         (snapshot_root / "pre_repair.diff").write_text(diff, encoding="utf-8")
 
-    def _revert(self, artifact_id: str, baseline_blob: object) -> None:
+    def _revert(self, artifact_id: str, baseline_blob: object, baseline_mode: object) -> None:
         target = self._artifact_path(artifact_id)
         if baseline_blob is None:
             target.unlink(missing_ok=True)
             return
         if not isinstance(baseline_blob, str):
             raise ValueError("baseline blob must be a string")
+        if baseline_mode not in {None, "100644", "100755", "120000"}:
+            raise ValueError(f"unsupported baseline mode: {baseline_mode!r}")
         content = self.repo.odb.stream(bytes.fromhex(baseline_blob)).read()
         target.parent.mkdir(parents=True, exist_ok=True)
+        if baseline_mode == "120000":
+            target.unlink(missing_ok=True)
+            target.symlink_to(content.decode("utf-8"))
+            return
         target.write_bytes(content)
+        if baseline_mode == "100755":
+            target.chmod(0o755)
+        elif baseline_mode == "100644":
+            target.chmod(0o644)
 
     def _modify(self, artifact_id: str, patch: bytes) -> None:
         target = self._artifact_path(artifact_id)
@@ -139,6 +151,7 @@ class RepairExecutor:
                     self._revert(
                         decision.artifact_id,
                         artifacts[decision.artifact_id]["baseline_blob"],
+                        artifacts[decision.artifact_id].get("baseline_mode"),
                     )
                 else:
                     if decision.artifact_id not in patches:

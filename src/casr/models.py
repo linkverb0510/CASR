@@ -83,6 +83,8 @@ class Artifact(BaseModel):
     path: str
     baseline_blob: str | None = None
     current_blob: str | None = None
+    baseline_mode: str | None = None
+    current_mode: str | None = None
     produced_by: list[str] = Field(default_factory=list)
     dependencies: list[str] = Field(default_factory=list)
     evidence_ids: list[str] = Field(default_factory=list)

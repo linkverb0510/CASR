@@ -58,6 +58,9 @@ Thumbs.db
 !/logs/cluster-smoke-linux-20261125/environment.json
 !/logs/cluster-smoke-linux-20261125/prepare.log
 !/logs/cluster-smoke-linux-20261125/pytest.log
+!/logs/review-fix-20261126/
+/logs/review-fix-20261126/*
+!/logs/review-fix-20261126/pytest.log
 !/logs/local-smoke-001/
 /logs/local-smoke-001/*
 !/logs/local-smoke-001/environment.json

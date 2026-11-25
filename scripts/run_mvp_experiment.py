@@ -240,6 +240,7 @@ def run_policy(
         workspace.mkdir()
         for relative, content in base_files.items():
             write_file(workspace, relative, content)
+            written.append(relative)
         for relative, content in final_files.items():
             write_file(workspace, relative, content)
             written.append(relative)
@@ -424,9 +425,16 @@ def run(config_path: Path, output_dir: Path) -> None:
         "code_revision": code_revision,
         "working_tree_dirty": bool(
             subprocess.check_output(
-                ["git", "status", "--porcelain"], cwd=ROOT, text=True, stderr=subprocess.DEVNULL
+                [
+                    "git", "status", "--porcelain", "--",
+                    "src", "scripts", "tests", "experiments", "pyproject.toml", "uv.lock",
+                ],
+                cwd=ROOT,
+                text=True,
+                stderr=subprocess.DEVNULL,
             ).strip()
         ),
+        "dirty_check_scope": "src/ scripts/ tests/ experiments/ pyproject.toml uv.lock",
         "config": config,
         "command": f"uv run python scripts/run_mvp_experiment.py --config {config_path} --output-dir {output_dir}",
     }

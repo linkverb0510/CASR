@@ -207,9 +207,9 @@ def run(config_path: Path, output_dir: Path) -> None:
         "run_count": len(raw),
         "variants": variants,
         "conclusion": (
-            "在该合成设定中，漏记需求到动作的溯源使 3/3 案例无法启动修复；"
+            "在该构造性合成设定中，漏记需求到动作的溯源使 3/3 案例无法启动修复；"
             "加入一条伪依赖仍通过 3/3 验收，但把保留产物从 Retain 推到 Revalidate。"
-            "因此溯源召回是正确性瓶颈，精度主要影响复核范围。"
+            "这提示应优先检验真实轨迹中的溯源召回，但当前结果不能证明其在真实项目中是主要瓶颈。"
         ),
         "limitations": [
             "三个案例共享同一模板，只改变保留模块数量，不能代表真实项目多样性。",
@@ -228,10 +228,16 @@ def run(config_path: Path, output_dir: Path) -> None:
         "code_revision": code_revision(),
         "working_tree_dirty": bool(
             subprocess.check_output(
-                ["git", "status", "--porcelain"], cwd=ROOT, text=True,
+                [
+                    "git", "status", "--porcelain", "--",
+                    "src", "scripts", "tests", "experiments", "pyproject.toml", "uv.lock",
+                ],
+                cwd=ROOT,
+                text=True,
                 stderr=subprocess.DEVNULL,
             ).strip()
         ),
+        "dirty_check_scope": "src/ scripts/ tests/ experiments/ pyproject.toml uv.lock",
         "command": f"uv run python scripts/run_graph_ablation.py --config {config_path} --output-dir {output_dir}",
     }
     (output_dir / "run_metadata.json").write_text(

@@ -55,36 +55,33 @@ def analyze_impact(
     graph: ProvenanceGraph, ledger: RequirementLedger, correction: Correction
 ) -> ImpactAnalysis:
     if correction.correction_type != "ADD":
-        if ledger.get(correction.target_requirement_id).current.status == "Active":
+        if (
+            correction.correction_type in {"REVOKE", "SUPERSEDE"}
+            and ledger.get(correction.target_requirement_id).current.status == "Active"
+        ):
             raise ValueError("correction target is still active")
 
-    invalid_requirement_ids = {
-        version.requirement_id for version in ledger.invalid_versions()
-    }
-    active_requirement_ids = {
-        version.requirement_id for version in ledger.active_requirements()
+    active_versions = ledger.active_requirements()
+    active_nodes = {
+        f"requirement:{version.requirement_id}:v{version.version}"
+        for version in active_versions
     }
     requirement_nodes = {
         node["id"]
         for node in graph.to_dict()["nodes"]
         if node["kind"] == "requirement"
     }
-    invalid_nodes = {
-        node_id
-        for node_id in requirement_nodes
-        if any(
-            node_id.startswith(f"requirement:{requirement_id}:v")
-            for requirement_id in invalid_requirement_ids
-        )
-    }
-    active_nodes = {
-        node_id
-        for node_id in requirement_nodes
-        if any(
-            node_id.startswith(f"requirement:{requirement_id}:v")
-            for requirement_id in active_requirement_ids
-        )
-    }
+    if correction.correction_type == "ADD":
+        invalid_nodes: set[str] = set()
+    else:
+        target_id = correction.target_requirement_id
+        invalid_nodes = {
+            node_id
+            for node_id in requirement_nodes
+            if target_id is not None
+            and node_id.startswith(f"requirement:{target_id}:v")
+        }
+    active_nodes &= requirement_nodes
     edges = graph.impact_edges()
     seeds = _supported_artifacts(set(invalid_nodes), edges)
     active_supported = _supported_artifacts(set(active_nodes), edges)

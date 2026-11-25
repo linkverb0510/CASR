@@ -100,6 +100,23 @@ def test_invalid_corrections_raise_value_error(item: Correction) -> None:
         ledger.apply_correction(item)
 
 
+@pytest.mark.parametrize("kind", ["AMEND", "REVOKE", "SUPERSEDE"])
+def test_inactive_requirement_cannot_be_modified_again(kind: str) -> None:
+    ledger = RequirementLedger()
+    ledger.add_requirement("R1", "old", NOW)
+    ledger.apply_correction(correction("REVOKE", target_requirement_id="R1"))
+
+    with pytest.raises(ValueError, match="active"):
+        ledger.apply_correction(
+            correction(
+                kind,
+                target_requirement_id="R1",
+                content="new",
+                new_requirement_id="R2" if kind == "SUPERSEDE" else None,
+            )
+        )
+
+
 def test_duplicate_requirement_id_is_rejected() -> None:
     ledger = RequirementLedger()
     ledger.add_requirement("R1", "first", NOW)

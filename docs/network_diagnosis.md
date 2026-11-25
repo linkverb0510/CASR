@@ -9,7 +9,7 @@
 ## 1. 结论
 
 1. 测量时 EasyConnect 的 Sangfor SSL VPN 适配器处于 **Disconnected**，没有连接集群内网的 VPN 路由。
-2. 唯一 IPv4 默认路由走 WLAN；`192.168.5.0/24` 没有专用路由。
+2. 唯一 IPv4 默认路由走 WLAN；`<cluster-subnet>` 没有专用路由。
 3. 集群域名 `gpu.act.buaa.edu.cn` 当前解析到 `198.18.0.74`，这是常见的本地代理 fake-IP 地址段，说明当前浏览器访问很可能经过本地代理链路。
 4. WinHTTP 为直连；WinINET 和当前进程环境分别指向本地代理端口；Sangfor 同时提供一个本地 PAC 服务。
 5. **无法据此判定 EasyConnect 本身是全局路由还是分流路由。** 必须取得 VPN 连接后的默认路由、集群网段路由和 DNS 快照进行对比。
@@ -24,7 +24,7 @@ Up 适配器：
 
 | ifIndex | 名称 | 地址 |
 |---:|---|---|
-| 14 | WLAN | `10.135.146.27/16` |
+| 14 | WLAN | `<local-ip>/16` |
 | 24 | VMware Network Adapter VMnet1 | `192.168.154.1/24` |
 | 20 | VMware Network Adapter VMnet8 | `192.168.131.1/24` |
 | 74 | vEthernet (FSE HostVnic) | Hyper-V 虚拟适配器 |
@@ -42,14 +42,14 @@ VPN 相关适配器均为 Disconnected：
 
 ```text
 DestinationPrefix  Interface  NextHop      RouteMetric
-0.0.0.0/0          WLAN        10.135.0.1   0
+0.0.0.0/0          WLAN        <gateway>   0
 ```
 
-没有发现 `192.168.5.0/24` 或 `192.168.5.98/32` 的专用路由。
+没有发现 `<cluster-subnet>` 或 `<cluster-host>/32` 的专用路由。
 
 `Find-NetRoute` 对以下目标均选择 WLAN：
 
-- `192.168.5.98`
+- `<cluster-host>`
 - `219.224.171.1`（官方登录文档给出的 DNS 解析备选地址）
 
 ### 2.3 DNS
@@ -101,8 +101,8 @@ PAC 服务返回 200，内容长度 14070 字符。只检查了结构和指令�
 |---|---|---|
 | Sangfor 适配器 | Disconnected | Disconnected |
 | McAfee / QMTAP / UU TAP | Disconnected | Disconnected |
-| 默认路由 | 仅 WLAN | 仅 WLAN，下一跳 `10.135.0.1` |
-| `192.168.5.0/24` 路由 | 无 | 无 |
+| 默认路由 | 仅 WLAN | 仅 WLAN，下一跳 `<gateway>` |
+| `<cluster-subnet>` 路由 | 无 | 无 |
 | 本机 `192.168.5.*` 地址 | 无 | 无 |
 | 集群域名 DNS | `198.18.0.74` | `198.18.0.74` |
 | 浏览器访问 Crater | 可用 | 可用 |
@@ -132,12 +132,12 @@ Get-DnsClientServerAddress -AddressFamily IPv4 |
     Select-Object InterfaceIndex, InterfaceAlias, ServerAddresses
 
 Resolve-DnsName gpu.act.buaa.edu.cn -Type A
-Find-NetRoute -RemoteIPAddress 192.168.5.98
+Find-NetRoute -RemoteIPAddress <cluster-host>
 ```
 
 判定原则：
 
-- 若 VPN 连接后新增更具体的 `192.168.5.0/24` 路由，而默认路由仍主要由 WLAN 承担，支持**分流路由**判断。
+- 若 VPN 连接后新增更具体的 `<cluster-subnet>` 路由，而默认路由仍主要由 WLAN 承担，支持**分流路由**判断。
 - 若 VPN 接管默认路由或大量非集群网段，支持**全局/大范围接管**判断。
 - 若 DNS 仍返回 fake-IP，需同时检查本地代理规则；不能把代理 fake-IP 当作 VPN 路由证据。
 - 若 Sangfor 适配器仍为 Disconnected，则根本没有可比较的 VPN 连接后状态。

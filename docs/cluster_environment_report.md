@@ -9,8 +9,8 @@
 ## 1. 结论摘要
 
 1. 本地 OpenSSH、SCP、Git、Windows PowerShell 均已安装，可承担脚本化同步与测试。
-2. 已登录的 Crater 账号为 `panxg27`。本次创建并运行了一个 1 CPU、2 GiB、0 GPU 的 Jupyter 开发作业，验证结束后已停止。
-3. 从已有 Jupyter 作业配置核实，持久目录 `/home/panxg27` 挂载到共享存储 `crater-rw-storage` 的 `sugon-gpu-home-lab/panxg27` 子路径。
+2. 已登录的 Crater 账号为 `<cluster-user>`。本次创建并运行了一个 1 CPU、2 GiB、0 GPU 的 Jupyter 开发作业，验证结束后已停止。
+3. 从已有 Jupyter 作业配置核实，持久目录 `/home/<cluster-user>` 挂载到共享存储 `crater-rw-storage` 的 `sugon-gpu-home-lab/<cluster-user>` 子路径。
 4. 实际作业 YAML 使用 `batch.volcano.sh/v1alpha1`，调度器为 `volcano`；没有证据表明用户应使用 Slurm 命令。
 5. 官方 CLI 文档明确了 `job ls`、`job exec`、`job ssh`、`job pods` 和账户切换等能力，但没有文档化的作业创建或自动提交命令。
 6. 因此采用半自动模式：**Agent 准备代码、脚本和作业参数 → 用户在网页确认并提交 → 作业在持久目录写日志和结果 → Agent 通过运行中的开发作业或文件系统收集**。
@@ -31,8 +31,8 @@
 
 仅检查公钥指纹，未读取私钥内容：
 
-- `id_rsa.pub`：3072 位 RSA，`SHA256:lbR5Ed9RuYkYesGPoh/XnAqBf+OZrxVqsWj7Klv/w0g`
-- `os-lab-ed25519.pub`：256 位 ED25519，`SHA256:Y+VzslQVJVZ/obYXiJfaWA+CSwYctp7P70GyVRJrSVM`
+- `id_rsa.pub`：3072 位 RSA，`<redacted-public-key-fingerprint>`
+- `os-lab-ed25519.pub`：256 位 ED25519，`<redacted-public-key-fingerprint>`
 
 已有密钥存在，因此没有触发“无密钥时生成专用密钥”的分支。没有选择或注册其中任何一把钥匙，也没有修改 `~/.ssh/config`。`os-lab` 配置属于其他实验环境，未被复用。
 
@@ -40,17 +40,17 @@
 
 ### 3.1 直接证据
 
-登录后的平台总览显示当前用户为“潘炫光”。交互式作业和自定义作业列表中的作业名、详情链接及配置均属于 `panxg27`。
+登录后的平台总览显示当前用户为“<已脱敏用户>”。交互式作业和自定义作业列表中的作业名、详情链接及配置均属于 `<cluster-user>`。
 
 核查的最近一个 Jupyter 作业：
 
 - 作业名：`shp`
 - 状态：已释放
 - 账户：公共账户；YAML 中账户标识为 `default`
-- 工作目录：`/home/panxg27`
-- 持久挂载：`/home/panxg27`
+- 工作目录：`/home/<cluster-user>`
+- 持久挂载：`/home/<cluster-user>`
 - 共享存储卷：`crater-rw-storage`
-- 共享存储子路径：`sugon-gpu-home-lab/panxg27`
+- 共享存储子路径：`sugon-gpu-home-lab/<cluster-user>`
 - 后端 API：`batch.volcano.sh/v1alpha1`
 - 调度器：`volcano`
 
@@ -58,13 +58,13 @@
 
 | 项目 | 实测值 |
 |---|---|
-| 作业 | `jpt-panxg27-261125-ee9ee` |
+| 作业 | `jpt-<cluster-user>-261125-ee9ee` |
 | 类型 | Jupyter Lab |
 | 资源 | 1 CPU / 2 GiB / 0 GPU |
-| 节点 | `huawei-cpu-5` |
+| 节点 | `<cpu-node>` |
 | 状态 | 已停止 |
-| 工作目录 | `/home/panxg27` |
-| 持久卷 | `crater-rw-storage` / `sugon-gpu-home-lab/panxg27` |
+| 工作目录 | `/home/<cluster-user>` |
+| 持久卷 | `crater-rw-storage` / `sugon-gpu-home-lab/<cluster-user>` |
 
 作业详情确认调度器为 `volcano`，后端 API 为 `batch.volcano.sh/v1alpha1`。完整执行证据见 [cluster_execution_record.md](cluster_execution_record.md)。
 
@@ -84,11 +84,11 @@ CASR 不直接调用平台内部 API，也不使用 `sbatch`。GPU 作业需由�
 
 ### 4.3 开发作业与 GPU 作业是否共享存储
 
-**已确认：** 已有 Jupyter 作业的 `/home/panxg27` 是共享持久卷。
+**已确认：** 已有 Jupyter 作业的 `/home/<cluster-user>` 是共享持久卷。
 
 **文档确认：** 自定义作业可挂载用户空间文件夹；作业结果写回所选源文件夹。
 
-**仍需按实际作业确认：** 只有开发作业和 GPU 作业选择同一用户空间源目录时，才能保证二者访问同一份 CASR 代码和结果。挂载目标路径可能不同，例如 Jupyter 使用 `/home/panxg27`，自定义作业可能按页面配置挂载到 `/mnt/...`。脚本通过 `RemoteRoot` 参数兼容实际路径，不硬编码自定义作业的挂载位置。
+**仍需按实际作业确认：** 只有开发作业和 GPU 作业选择同一用户空间源目录时，才能保证二者访问同一份 CASR 代码和结果。挂载目标路径可能不同，例如 Jupyter 使用 `/home/<cluster-user>`，自定义作业可能按页面配置挂载到 `/mnt/...`。脚本通过 `RemoteRoot` 参数兼容实际路径，不硬编码自定义作业的挂载位置。
 
 ### 4.4 官方 API / CLI / Scheduler
 
@@ -130,8 +130,8 @@ chmod 600 ~/.ssh/authorized_keys
 
 | 项目 | 状态 | 说明 |
 |---|---|---|
-| EasyConnect 全局/分流路由判定 | 未确认 | 登录后 Sangfor 适配器仍 Disconnected，无 `192.168.5.0/24` 专用路由 |
-| 开发作业 SSH IP/端口 | 已验证 | `192.168.5.95:31258`，用户 `panxg27` |
+| EasyConnect 全局/分流路由判定 | 未确认 | 登录后 Sangfor 适配器仍 Disconnected，无 `<集群内网网段>` 专用路由 |
+| 开发作业 SSH IP/端口 | 已验证 | `<作业内网地址>:<端口>`，用户 `<cluster-user>` |
 | SSH 用户认证、SCP | 未通过 | 已有 RSA 和 ED25519 密钥均返回 publickey 失败 |
 | Jupyter 终端远程执行 | 已完成 | 使用官方登录会话，不读取令牌 |
 | 远程环境检查与轻量测试 | 已完成 | 第二次平台无关 smoke 为 PASS |
